@@ -89,6 +89,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             TempData["Active"] = "isemri";
             var gorev = _gorevService.GetirRaporlarileId(id);
             GorevListAllViewModel model = new GorevListAllViewModel();
+            model.Id = gorev.Id;
 
             model.Raporlar = gorev.Raporlar;
             model.Aciklama = gorev.Aciklama;
@@ -99,8 +100,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         }
         public IActionResult GetirExcel(int id)
         {
-            return File(_dosyaService.AktarExcel(_gorevService.GetirRaporlarileId(id).Raporlar),
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Guid.NewGuid()+".xlsx");
+            return File(_dosyaService.AktarExcel(_gorevService.GetirRaporlarileId(id).Raporlar), 
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Guid.NewGuid() + ".xlsx");
+
         }
         public IActionResult GetirPdf(int id)
         {

@@ -143,8 +143,6 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\s
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\IsTakip.Web.TagHelpers.input.cache
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\IsTakip.Web.TagHelpers.output.cache
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\IsTakip.Web.RazorCoreGenerate.cache
-C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_StandartLayout.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\IsTakip.Web.RazorTargetAssemblyInfo.cache
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\IsTakip.Web.RazorTargetAssemblyInfo.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\IsTakip.Web.Views.pdb
@@ -195,3 +193,4 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\R
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Profil\Index.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Wrapper\Default.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Wrapper\Member.cshtml.g.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
