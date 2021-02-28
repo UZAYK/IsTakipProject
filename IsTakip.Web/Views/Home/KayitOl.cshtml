@@ -1,0 +1,55 @@
+﻿@model AppUserAddViewModal
+@{
+    ViewData["Title"] = "KayitOl";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="KayitOl" asp-controller="Home" method="post" class="mt-5 w-75 mx-auto p-3 shadow">
+    <h4 class="text-center">KAYIT OL</h4>
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input asp-for="Name" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SurName"></label>
+        <span asp-validation-for="SurName" class="text-danger"></span>
+        <input asp-for="SurName" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group ">
+        <label asp-for="Email"></label>
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group ">
+        <label asp-for="UserName"></label>
+        <span asp-validation-for="UserName" class="text-danger"></span>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <input asp-for="Password" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword"></label>
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        <input asp-for="ConfirmPassword" class="form-control" />
+
+    </div>
+  
+    <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+
+    <a asp-action="Index" class="btn btn-warning btn-sm">
+        <i class="fas fa-hand-point-left mr-2"></i> Vazgeç</a>
+    <button type="submit" class="btn btn-info btn-sm">
+        <i class="fas fa-thumbs-up mr-2"></i> Kaydet
+    </button>
+
+</form>
+

@@ -1,0 +1,15 @@
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\bin\Debug\netcoreapp3.1\IsTakip.Entities.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\obj\Debug\netcoreapp3.1\IsTakip.DataAccess.csprojAssemblyReference.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\obj\Debug\netcoreapp3.1\IsTakip.DataAccess.AssemblyInfoInputs.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\obj\Debug\netcoreapp3.1\IsTakip.DataAccess.AssemblyInfo.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\bin\Debug\netcoreapp3.1\IsTakip.DataAccess.deps.json
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\bin\Debug\netcoreapp3.1\IsTakip.DataAccess.runtimeconfig.json
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\bin\Debug\netcoreapp3.1\IsTakip.DataAccess.runtimeconfig.dev.json
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\bin\Debug\netcoreapp3.1\IsTakip.DataAccess.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\bin\Debug\netcoreapp3.1\IsTakip.DataAccess.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\bin\Debug\netcoreapp3.1\IsTakip.Entities.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\obj\Debug\netcoreapp3.1\IsTakip.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\obj\Debug\netcoreapp3.1\IsTakip.DataAccess.csproj.CopyComplete
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\obj\Debug\netcoreapp3.1\IsTakip.DataAccess.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\obj\Debug\netcoreapp3.1\IsTakip.DataAccess.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DataAccess\obj\Debug\netcoreapp3.1\IsTakip.DataAccess.genruntimeconfig.cache

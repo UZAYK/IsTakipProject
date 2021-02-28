@@ -1,0 +1,99 @@
+﻿@model List<GorevListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@if (Model.Count != 0)
+{
+    <a asp-action="EkleGorev" asp-controller="Gorev"
+       class="btn btn-sm btn-info my-2">
+        <i class="fas fa-plus-circle mr-2"></i> Yeni Görev
+    </a>
+
+    <table class="table table-sm table-hover table-bordered mt-2">
+        <thead class="table table-striped table-active">
+
+            <tr>
+                <th scope="col">Ad</th>
+                <th scope="col">Açıklama</th>
+                <th scope="col">Aciliyet</th>
+                <th scope="col">Oluşturulma Tarihi</th>
+                <th scope="col">İşlemler</th>
+            </tr>
+
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">@item.Ad</th>
+                    <td>  @item.Aciklama</td>
+                    <td>  @item.Aciliyet.Tanim</td>
+                    <td>  @item.OlusturulmaTarihi.ToString("D")</td>
+                    <td>
+                        <a asp-action="GuncelleGorev" asp-route-id="@item.Id"
+                           class="btn btn-warning btn-sm">
+                            <i class="fas fa-pencil-alt mr-2"></i> Düzenle
+                        </a>
+
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#silmeEkrani"
+                           data-Id="@item.Id" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt mr-2"></i> Sil
+                        </a>
+
+                    </td>
+                </tr>
+            </tbody>
+         }
+
+    </table>
+ }
+
+else
+
+{
+    <div class="text-center mt-3">
+
+        <p class="lead"> Sistemde kayıtlı aciliyet durumu bulunamadı.</p>
+
+        <a asp-action="EkleGorev" asp-controller="Gorev"
+           class="btn btn-sm btn-info my-2">
+            <i class="fas fa-plus-circle mr-2"></i> Yeni Görev
+        </a>
+
+    </div>
+}
+
+@section Javascript{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#silmeEkrani").on("show.bs.modal", function (event) {
+                let tetikleyenElement = $(event.relatedTarget);
+                let id = tetikleyenElement.data("Id");
+
+                $("#btnSil").click(function () {
+                    $.ajax({
+                        type: "Get",
+                        url: "./Gorev/SilGorev",
+                        data: { id: id },
+                        dataType: "json",
+                        contentType: "application/json; charset= utf-8;",
+                        success: function () {
+                            //alert("İşlem tamamlandı.");
+                            window.location.reload();
+                        },
+                        error: function (error) {
+                            alert(error.statusText);
+                        }
+                    })
+                });
+            })
+        });
+
+    </script>
+
+}

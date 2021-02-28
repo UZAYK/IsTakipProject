@@ -1,0 +1,9 @@
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\bin\Debug\netcoreapp3.1\IsTakip.Entities.deps.json
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\bin\Debug\netcoreapp3.1\IsTakip.Entities.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\bin\Debug\netcoreapp3.1\IsTakip.Entities.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\obj\Debug\netcoreapp3.1\IsTakip.Entities.csprojAssemblyReference.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\obj\Debug\netcoreapp3.1\IsTakip.Entities.AssemblyInfoInputs.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\obj\Debug\netcoreapp3.1\IsTakip.Entities.AssemblyInfo.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\obj\Debug\netcoreapp3.1\IsTakip.Entities.csproj.CoreCompileInputs.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\obj\Debug\netcoreapp3.1\IsTakip.Entities.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Entities\obj\Debug\netcoreapp3.1\IsTakip.Entities.pdb

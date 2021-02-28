@@ -1,0 +1,14 @@
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.Business.deps.json
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.Business.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.Business.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.DataAccess.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.Entities.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.DataAccess.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.Entities.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.csprojAssemblyReference.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.AssemblyInfoInputs.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.AssemblyInfo.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.csproj.CoreCompileInputs.cache
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.csproj.CopyComplete
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.pdb
