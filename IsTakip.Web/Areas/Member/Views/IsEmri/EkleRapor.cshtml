@@ -1,0 +1,45 @@
+﻿@model RaporAddViewModel
+@{
+    ViewData["Title"] = "EkleRapor";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+<form asp-action="EkleRapor" asp-controller="IsEmri" method="post" class="w-75 mx-auto p-3">
+
+    <div class="text-center lead p-3">
+
+        <div class="card text-white bg-primary mb-3" style="">
+            <div class="card-header"><h4 class="text-white" style="text-decoration:underline;">Görevin Adı: </h4>@Model.Gorev.Ad</div>
+
+            <div class="card-body">
+                <h4 class="card-title"><h3 class="text-white" style="text-decoration:underline;">
+                    Görevin Aciliyet Durumu: </h3>@Model.Gorev.Aciliyet.Tanim</h4>
+                <p class="card-text">@Model.Gorev.Aciklama</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Tanim"></label>
+        <span asp-validation-for="Tanim" class="text-danger"></span>
+        <input asp-for="Tanim" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group ">
+        <label asp-for="Detay"></label>
+        <span asp-validation-for="Detay" class="text-danger"></span>
+        <input asp-for="Detay" class="form-control" />
+    </div>
+
+    <a asp-action="Index" class="btn btn-warning btn-sm"> <i class="fas fa-backward"></i> Vazgeç</a>
+    <button type="submit" class="btn btn-info btn-sm">
+        <i class="fas fa-thumbs-up ml-2"></i> Kaydet
+    </button>
+
+</form>
+
+@section JavaScript{
+    <script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
