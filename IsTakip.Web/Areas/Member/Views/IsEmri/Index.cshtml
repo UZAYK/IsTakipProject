@@ -26,7 +26,7 @@
 
                 @if (gorev.Raporlar.Count > 0)
                 {
-                    <a class="btn btn-light btn-sm" data-toggle="collapse" href="#collapseExample-@index"
+                    <a class="btn btn-dark btn-sm" data-toggle="collapse" href="#collapseExample-@index"
                        role="button" aria-expanded="false" aria-controls="collapseExample">
                         Raporlara Git <i class="fas fa-caret-down mx-1"></i>
                         <span class="badge badge-primary">@gorev.Raporlar.Count</span>
@@ -39,7 +39,7 @@
                     </span>
 
                     <a asp-action="EkleRapor" asp-route-id="@gorev.Id"
-                    class="btn btn-light btn-sm mx-1"> Rapor Yaz <i class="fas fa-pencil-alt"></i>
+                    class="btn btn-primary btn-sm mx-1"> Rapor Yaz <i class="fas fa-pencil-alt"></i>
                     </a>
                 }
 
@@ -51,7 +51,7 @@
             <div class="collapse" id="collapseExample-@index">
 
                 <a asp-action="EkleRapor" asp-route-id="@gorev.Id"
-                   class="btn btn-light btn-sm mx-1">
+                   class="btn btn-primary btn-sm mx-1 my-2">
                     Rapor Yaz <i class="fas fa-pencil-alt"></i>
                 </a>
 
@@ -69,7 +69,7 @@
                             <td>@rapor.Tanim</td>
                             <td>@rapor.Detay</td>
                             <td>
-                                <a asp-action="GuncelleRapor" asp-route-id="@rapor.Id" class="btn btn-warning btn-sm mr-2">
+                                <a asp-action="GuncelleRapor" asp-route-id="@rapor.Id" class="btn btn-danger btn-sm mr-2">
                                 <i class="fas fa-pencil-alt mr-2"></i> Düzenle
                                 </a>
                             </td>
