@@ -10,9 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Member\Models\" />
-    <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\documents\" />
-    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
   <ItemGroup>
