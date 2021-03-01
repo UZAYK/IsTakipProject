@@ -194,3 +194,4 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\R
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Wrapper\Default.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Wrapper\Member.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Member\Views\Profil\Index.cshtml.g.cs

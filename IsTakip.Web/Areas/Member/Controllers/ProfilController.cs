@@ -5,16 +5,15 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IsTakip.Web.Areas.Admin.Controllers
+namespace IsTakip.Web.Areas.Member.Controllers
 {
 
-    [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Area("Member")]
+    [Authorize(Roles = "Member")]
     public class ProfilController : Controller
     {
         private readonly UserManager<AppUser> _userManager;

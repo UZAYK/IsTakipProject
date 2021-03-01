@@ -1,8 +1,10 @@
 ﻿@model AppUserListViewModel
+
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
 }
+
 
 @if (TempData["message"] != null)
 {
@@ -48,7 +50,7 @@
             <div class="col-md-2">
 
             </div>
-          
+
             <div class="col-md-12">
                 <input type="file" class="form-control-file" style=" border:groove;" name="resim" id="Resim" />
             </div>
