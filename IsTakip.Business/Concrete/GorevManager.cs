@@ -4,6 +4,7 @@ using IsTakip.DataAccess.Interfaces;
 using IsTakip.Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace IsTakip.Business.Concrete
@@ -49,6 +50,11 @@ namespace IsTakip.Business.Concrete
         public List<Gorev> GetirTumTablolarla()
         {
             return _gorevDal.GetirTumTablolarla();
+        }
+
+        public List<Gorev> GetirTumTablolarla(Expression<Func<Gorev, bool>> filter)
+        {
+            return _gorevDal.GetirTumTablolarla(filter);
         }
 
         public void Guncelle(Gorev tablo)

@@ -19,11 +19,12 @@
     </div>
     <div class="list-group list-group-flush">
      
-        <a href="#" class="list-group-item list-group-item-action">
+        <a asp-action="Index" asp-controller="IsEmri" asp-route-id="@Model.Id" 
+            class="list-group-item list-group-item-action @(active=="isemri"?"active":"")">
             <i class="fas fa-envelope-open-text mr-2"></i>
             Gelen İş Emirleri
         </a>
-        <a href="#" class="list-group-item list-group-item-action ">
+        <a href="" class="list-group-item list-group-item-action ">
             <i class="fas fa-clipboard-check mr-2"></i>
              Tamamladığım İşler
         </a>

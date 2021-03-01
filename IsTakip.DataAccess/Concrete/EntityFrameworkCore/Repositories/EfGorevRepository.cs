@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
@@ -42,6 +43,13 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
             using var context = new IsTakipContext();
             return context.Gorevler.Include(I => I.Aciliyet).Include(I => I.Raporlar).Include(I => I.AppUser)
                 .Where(I => !I.Durum).OrderByDescending(I => I.OlusturulmaTarihi).ToList();
+        }
+
+        public List<Gorev> GetirTumTablolarla(Expression<Func<Gorev, bool>> filter)
+        {
+            using var context = new IsTakipContext();
+            return context.Gorevler.Include(I => I.Aciliyet).Include(I => I.Raporlar).Include(I => I.AppUser)
+                .Where(filter).OrderByDescending(I => I.OlusturulmaTarihi).ToList();
         }
     }
 }
