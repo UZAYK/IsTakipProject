@@ -50,8 +50,6 @@ namespace IsTakip.Web
             });
 
             services.AddControllersWithViews();
-            //services.AddRazorPages()
-            //     .AddSessionStateTempDataProvider();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
