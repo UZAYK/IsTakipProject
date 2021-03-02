@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "OQBbiqClnDg/XpyXSp7k3QQ79yoqh8OYcl8Ey89jV8l28ICw3Pho+5pAlTlmcrTHBhIqw3fbBYmMGwK2yV0tww==",
+  "dgSpecHash": "8KrhRtB//t/5ZTIfjsIMW0OuxwU3YkfZ8LrNMuqAGys+oY2s2HE7rOlYXCvMK45U40GwzTP6Qld6zDONH5ke0A==",
   "success": true,
   "projectFilePath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Web\\IsTakip.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uzayk\\.nuget\\packages\\epplus\\5.5.3\\epplus.5.5.3.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\fastmember\\1.5.0\\fastmember.1.5.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\itextsharp.lgplv2.core\\1.7.1\\itextsharp.lgplv2.core.1.7.1.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\jquery\\1.6.3\\jquery.1.6.3.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
@@ -205,7 +206,8 @@
     "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\toastr\\2.1.1\\toastr.2.1.1.nupkg.sha512"
   ],
   "logs": []
 }

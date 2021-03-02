@@ -107,6 +107,12 @@ namespace IsTakip.Web.Areas.Member.Controllers
             }
             return View(model);
         }
-
+        public IActionResult TamamlaGorev(int gorevId)
+        {
+            var guncellenecekGorev = _gorevService.GetirIdile(gorevId);
+            guncellenecekGorev.Durum = true;
+            _gorevService.Guncelle(guncellenecekGorev);
+            return Json(null);
+        }
     }
 }
