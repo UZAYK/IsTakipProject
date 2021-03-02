@@ -197,3 +197,4 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\R
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Member\Views\Profil\Index.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Member\Views\IsEmri\Index.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Member\Views\IsEmri\EkleRapor.cshtml.g.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Member\Views\IsEmri\GuncelleRapor.cshtml.g.cs

@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Admin.Models
 {
-    public class RaporAddViewModel
+    public class RaporUpdateViewModel
     {
+        public int Id { get; set; }
+
         public int GorevId { get; set; }
 
         [Required(ErrorMessage = "Tanım alanı boş geçilemez")]

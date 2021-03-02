@@ -13,8 +13,13 @@ namespace IsTakip.Business.Concrete
         public RaporManager(IRaporDal raporDal)
         {
             _raporDal = raporDal;
-
         }
+
+        public Rapor GetirGorevileId(int id)
+        {
+            return _raporDal.GetirGorevileId(id);
+        }
+
         public List<Rapor> GetirHepsi()
         {
             return _raporDal.GetirHepsi();

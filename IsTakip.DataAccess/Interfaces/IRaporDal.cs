@@ -7,6 +7,6 @@ namespace IsTakip.DataAccess.Interfaces
 {
     public interface IRaporDal : IGenericDal<Rapor>
     {
-
+        Rapor GetirGorevileId(int id);
     }
 }
