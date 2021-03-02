@@ -49,7 +49,8 @@ namespace IsTakip.Web
                 opt.LoginPath = "/Home/Index";
             });
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                  .AddRazorRuntimeCompilation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
