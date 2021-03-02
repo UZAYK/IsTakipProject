@@ -1,6 +1,7 @@
 ﻿using IsTakip.Business.Interfaces;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.Areas.Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Member.Controllers
 {
+    [Authorize(Roles = "Member")]
     [Area("Member")]
     public class IsEmriController : Controller
     {

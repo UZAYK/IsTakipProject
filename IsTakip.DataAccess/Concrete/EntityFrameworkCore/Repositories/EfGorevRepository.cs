@@ -22,7 +22,7 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
         {
             using var context = new IsTakipContext();
             return context.Gorevler.Include(I => I.Raporlar).
-                Include(I => I.AppUser).Where(I => I.Id ==  id).FirstOrDefault();
+                Include(I => I.AppUser).Where(I => I.Id == id).FirstOrDefault();
         }
 
         public List<Gorev> GetirAppUserId(int appUserId)
@@ -50,6 +50,16 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
             using var context = new IsTakipContext();
             return context.Gorevler.Include(I => I.Aciliyet).Include(I => I.Raporlar).Include(I => I.AppUser)
                 .Where(filter).OrderByDescending(I => I.OlusturulmaTarihi).ToList();
+        }
+
+        public List<Gorev> GetirTumTablolarlaTamamlanmayan(out int toplamSayfa, int userId, int aktifSayfa = 1)
+        {
+            using var context = new IsTakipContext();
+            var returnValue = context.Gorevler.Include(I => I.Aciliyet).Include(I => I.Raporlar).Include(I => I.AppUser)
+                 .Where(I => I.AppUserId == userId).OrderByDescending(I => I.OlusturulmaTarihi).Skip((1 - aktifSayfa) * 3).Take(3);
+
+            toplamSayfa =(int) Math.Ceiling((double)returnValue.Count() / 3);
+            return returnValue.ToList();
         }
     }
 }
