@@ -1,0 +1,75 @@
+﻿@model List<GorevListAllViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+    int index = 0;
+}
+
+@foreach (var gorev in Model)
+{
+    index++;
+    <div class="card m-3">
+
+        <div class="card-header">
+            @gorev.Ad
+        </div>
+
+        <div class="card-body">
+
+            <h5 class="card-title">
+                <span class="text-danger">@gorev.Aciliyet.Tanim</span>
+            </h5>
+
+            <p class="card-text">@gorev.Aciklama</p>
+
+            <p class="text-right">
+
+                @if (gorev.Raporlar.Count > 0)
+                {
+                    <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#collapseExample-@index"
+                       role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Raporlara Git <i class="fas fa-caret-down mx-1"></i>
+                        <span class="badge badge-primary p-1" style="font-size:12px;">@gorev.Raporlar.Count</span>
+                    </a>
+                }
+
+            </p>
+
+            <div class="collapse" id="collapseExample-@index">
+
+                <table class="table table-hover table-bordered table-sm">
+                    <thead class="table table-striped table-active">
+                        <tr>
+                            <th scope="col">Tanım</th>
+                            <th scope="col">Detay</th>
+                        </tr>
+                    </thead>
+                    @foreach (var rapor in gorev.Raporlar)
+                    {
+                        <tr>
+                            <td>@rapor.Tanim</td>
+                            <td>@rapor.Detay</td>
+
+
+                        </tr>
+                    }
+                </table>
+            </div>
+
+        </div>
+    </div>
+}
+<div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+
+    @for (int i = 1; i <= ViewBag.ToplamSayfa; i++)
+    {
+        <div class="btn-group mr-2 @(ViewBag.AktifSayfa==i?"active":"")" role="group" aria-label="First group">
+
+            <button type="button" class="btn btn-outline-primary btn-sm " asp-action="Index" asp-route-aktifSayfa="@i">@i</button>
+        </div>
+
+    }
+
+</div>
+
+

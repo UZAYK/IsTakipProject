@@ -56,10 +56,11 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
         {
             using var context = new IsTakipContext();
             var returnValue = context.Gorevler.Include(I => I.Aciliyet).Include(I => I.Raporlar).Include(I => I.AppUser)
-                 .Where(I => I.AppUserId == userId).OrderByDescending(I => I.OlusturulmaTarihi).Skip((1 - aktifSayfa) * 3).Take(3);
+                 .Where(I => I.AppUserId == userId && I.Durum).OrderByDescending(I => I.OlusturulmaTarihi);
 
             toplamSayfa =(int) Math.Ceiling((double)returnValue.Count() / 3);
-            return returnValue.ToList();
+
+            return returnValue.Skip((aktifSayfa - 1) * 3).Take(3).ToList();
         }
     }
 }
