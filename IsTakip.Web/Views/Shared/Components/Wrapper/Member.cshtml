@@ -18,19 +18,25 @@
 
     </div>
     <div class="list-group list-group-flush">
-     
+
         <a asp-action="Index" asp-controller="IsEmri"
-            class="list-group-item list-group-item-action @(active=="isemri"?"active":"")">
+           class="list-group-item list-group-item-action @(active=="isemri"?"active":"")">
             <i class="fas fa-envelope-open-text mr-2"></i>
             Gelen İş Emirleri
         </a>
         <a asp-action="Index" asp-controller="Gorev" class="list-group-item list-group-item-action @(active=="gorev"?"active":"") ">
             <i class="fas fa-clipboard-check mr-2"></i>
-             Tamamladığım İşler
+            Tamamladığım İşler
         </a>
 
         <a href="#" class="list-group-item list-group-item-action ">
-            <i class="fas fa-bell mr-2"></i>
+            <i class="far fa-bell mr-2"></i>
+            @if (ViewBag.BildirimSayisi > 0)
+            {
+                <sub class="badge badge-info badge-pill position-absolute" style="bottom:0.625rem!important; left:1.7rem!important; font-size:8px;">
+                    <small>@ViewBag.BildirimSayisi</small>
+                </sub>
+            }
             Bildirimler
         </a>
 

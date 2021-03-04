@@ -22,6 +22,11 @@ namespace IsTakip.Business.Concrete
             return _bildirimDal.GetirIdile(id);
         }
 
+        public List<Bildirim> GetirOkunmayanlar(int appUserId)
+        {
+            return _bildirimDal.GetirOkunmayanlar(appUserId);
+        }
+
         public void Guncelle(Bildirim tablo)
         {
             _bildirimDal.Guncelle(tablo);

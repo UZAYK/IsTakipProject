@@ -7,5 +7,6 @@ namespace IsTakip.Business.Interfaces
 {
     public interface IBildirimService : IGenericService<Bildirim>
     {
+        List<Bildirim> GetirOkunmayanlar(int appUserId);
     }
 }
