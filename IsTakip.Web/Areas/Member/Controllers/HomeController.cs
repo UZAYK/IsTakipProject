@@ -13,6 +13,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
     {
         public IActionResult Index()
         {
+            TempData["Active"] = "anasayfa";
             return View();
         }
     }
