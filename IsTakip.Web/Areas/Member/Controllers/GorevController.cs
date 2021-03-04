@@ -16,6 +16,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
     [Area("Member")]
     public class GorevController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly UserManager<AppUser> _userManager;
         private readonly IGorevService _gorevService;
         public GorevController(UserManager<AppUser> userManager, IGorevService gorevService)
@@ -23,6 +24,9 @@ namespace IsTakip.Web.Areas.Member.Controllers
             _userManager = userManager;
             _gorevService = gorevService;
         }
+        #endregion
+
+        #region Index/Ana Sayfa
         public async Task<IActionResult> Index(int aktifSayfa = 1)
         {
             TempData["Active"] = "gorev";
@@ -49,5 +53,6 @@ namespace IsTakip.Web.Areas.Member.Controllers
             }
             return View(models);
         }
+        #endregion
     }
 }

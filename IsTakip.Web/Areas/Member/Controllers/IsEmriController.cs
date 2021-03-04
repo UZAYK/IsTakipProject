@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Member.Controllers
 {
-
     [Authorize(Roles = "Member")]
     [Area("Member")]
     public class IsEmriController : Controller

@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Member.Controllers
 {
-
     [Area("Member")]
     [Authorize(Roles = "Member")]
     public class ProfilController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly UserManager<AppUser> _userManager;
         public ProfilController(UserManager<AppUser> userManager)
         {
@@ -33,7 +33,9 @@ namespace IsTakip.Web.Areas.Member.Controllers
             model.Email = appUser.Email;
             return View(model);
         }
+        #endregion
 
+        #region Index/Ana Sayfa
         [HttpPost]
         public async Task<IActionResult> Index(AppUserListViewModel model, IFormFile resim)
         {
@@ -70,6 +72,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
                 }
             }
             return View(model);
-        }
+        } 
+        #endregion
     }
 }
