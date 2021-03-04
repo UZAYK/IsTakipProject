@@ -11,7 +11,7 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
         public List<Bildirim> GetirOkunmayanlar(int appUserId)
         {
             using var context = new IsTakipContext();
-            return context.Bildirimler.Where(I => I.AppUserId == AppUserId && !I.Durum).ToList();
+            return context.Bildirimler.Where(I => I.AppUserId == appUserId && !I.Durum).ToList();
         }
     }
 }

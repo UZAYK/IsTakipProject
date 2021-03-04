@@ -461,3 +461,4 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\bin\Debug\netcoreapp3.1\M
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\IsTakip.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Member\Views\Gorev\Index.cshtml.g.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Bildirim\Index.cshtml.g.cs

@@ -17,7 +17,7 @@
         <img src="~/img/@Model.Picture" alt="@Model.Name" style="height:10rem!important;" class="w-auto img-thumbnail" />
 
     </div>
-    <div class="list-group list-group-flush">
+    <div class="list-group list-group-flush mt-4">
         <a asp-action="Index" asp-controller="Gorev" class="list-group-item list-group-item-action @(active=="gorev"?"active":"")"><i class="fas fa-tasks mr-2"></i> Görev İşlemleri</a>
         <a asp-action="Index" asp-controller="Aciliyet" class="list-group-item list-group-item-action  @(active=="aciliyet"?"active":"")">
             <i class="fas fa-exclamation mr-2"></i>
@@ -36,7 +36,7 @@
             İstatistikler
         </a>
 
-        <a href="#" class="list-group-item list-group-item-action ">
+        <a asp-action="Index" asp-controller="Bildirim" class="list-group-item list-group-item-action @(active=="isemri"?"bildirim":"") ">
             <i class="far fa-bell mr-2"></i>
             @if (ViewBag.BildirimSayisi > 0)
             {
