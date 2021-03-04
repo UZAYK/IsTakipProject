@@ -9,23 +9,30 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Member.Controllers
 {
+
     [Authorize(Roles = "Member")]
     [Area("Member")]
     public class IsEmriController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly IGorevService _gorevService;
         private readonly UserManager<AppUser> _userManager;
         private readonly IRaporService _raporService;
+        private readonly IBildirimService _bildirimService;
 
         public object RaporUpdateViewModel { get; private set; }
 
-        public IsEmriController(IGorevService gorevService, UserManager<AppUser> userManager, IRaporService raporService)
+        public IsEmriController(IGorevService gorevService, UserManager<AppUser> userManager,
+                                IRaporService raporService, IBildirimService bildirimService)
         {
             _gorevService = gorevService;
             _raporService = raporService;
             _userManager = userManager;
+            _bildirimService = bildirimService;
         }
+        #endregion
 
+        #region Index/Ana Sayfa
         public async Task<IActionResult> Index()
         {
             TempData["Active"] = "isemri";
@@ -48,6 +55,9 @@ namespace IsTakip.Web.Areas.Member.Controllers
             return View(models);
         }
 
+        #endregion
+
+        #region Rapor Ekleme
         public IActionResult EkleRapor(int id)
         {
             var gorev = _gorevService.GetirAciliyetileId(id);
@@ -58,7 +68,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         }
 
         [HttpPost]
-        public IActionResult EkleRapor(RaporAddViewModel model)
+        public async Task<IActionResult> EkleRaporAsync(RaporAddViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -67,14 +77,27 @@ namespace IsTakip.Web.Areas.Member.Controllers
                     GorevId = model.GorevId,
                     Detay = model.Detay,
                     Tanim = model.Tanim,
-
                 });
+                var adminUserList = await _userManager.GetUsersInRoleAsync("Admin");
+                var aktifKulanici = await _userManager.FindByNameAsync(User.Identity.Name);
+
+                foreach (var admin in adminUserList)
+                {
+                    _bildirimService.Kaydet(new Bildirim()
+                    {
+                        Aciklama = $"{aktifKulanici.Name} {aktifKulanici.SurName} yeni bir rapor yazdı.",
+                        AppUserId = admin.Id,
+                    });
+                }
+
                 return RedirectToAction("Index");
 
             }
             return View(model);
         }
+        #endregion
 
+        #region Rapor Güncelleme
         public IActionResult GuncelleRapor(int id)
         {
             TempData["Active"] = "isemri";
@@ -107,12 +130,28 @@ namespace IsTakip.Web.Areas.Member.Controllers
             }
             return View(model);
         }
-        public IActionResult TamamlaGorev(int gorevId)
+        #endregion
+
+        #region Görev Tamamlama
+        public async Task<IActionResult> TamamlaGorevAsync(int gorevId)
         {
             var guncellenecekGorev = _gorevService.GetirIdile(gorevId);
             guncellenecekGorev.Durum = true;
             _gorevService.Guncelle(guncellenecekGorev);
+
+            var adminUserList = await _userManager.GetUsersInRoleAsync("Admin");
+            var aktifKulanici = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            foreach (var admin in adminUserList)
+            {
+                _bildirimService.Kaydet(new Bildirim()
+                {
+                    Aciklama = $"{aktifKulanici.Name} {aktifKulanici.SurName} vermiş olduğunuz görevi tamamladı.",
+                    AppUserId = admin.Id,
+                });
+            }
             return Json(null);
         }
+        #endregion
     }
 }
