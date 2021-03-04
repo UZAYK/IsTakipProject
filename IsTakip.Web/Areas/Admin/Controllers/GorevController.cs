@@ -15,6 +15,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     [Area("Admin")]
     public class GorevController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly IGorevService _gorevService;
         private readonly IAciliyetService _aciliyetService;
         public GorevController(IGorevService gorevService, IAciliyetService aciliyetService)
@@ -23,6 +24,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             _aciliyetService = aciliyetService;
         }
 
+        #endregion
+
+        #region Index / Ana Sayfa
         public IActionResult Index()
         {
             TempData["Active"] = "gorev";
@@ -45,7 +49,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             }
             return View(models);
         }
+        #endregion
 
+        #region Görev Ekle
         public IActionResult EkleGorev()
         {
             TempData["Active"] = "gorev";
@@ -69,7 +75,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
 
             return View(model);
         }
+        #endregion
 
+        #region Görev Güncelle
         public IActionResult GuncelleGorev(int id)
         {
             TempData["Active"] = "gorev";
@@ -101,15 +109,18 @@ namespace IsTakip.Web.Areas.Admin.Controllers
                     AciliyetId = model.AciliyetId,
                 });
                 return RedirectToAction("Index");
-            }
+            } 
 
             return View(model);
         }
+        #endregion
 
+        #region Görev Sil
         public IActionResult SilGorev(int id)
         {
             _gorevService.Sil(new Gorev { Id = id });
             return Json(null);
-        }
+        } 
+        #endregion
     }
 }

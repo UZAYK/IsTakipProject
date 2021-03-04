@@ -14,11 +14,14 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     [Authorize(Roles ="Admin")]
     public class AdminController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly UserManager<AppUser> _userManager;
         public AdminController(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
-        }
+        } 
+        #endregion
+
         public async Task<IActionResult> Index()
         {
             //var appUser = await _userManager.FindByNameAsync(User.Identity.Name);

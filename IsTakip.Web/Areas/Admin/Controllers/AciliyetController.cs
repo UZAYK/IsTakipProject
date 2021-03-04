@@ -14,11 +14,15 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     [Area("Admin")]
     public class AciliyetController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly IAciliyetService _aciliyetService;
         public AciliyetController(IAciliyetService aciliyetService)
         {
             _aciliyetService = aciliyetService;
         }
+        #endregion
+
+        #region Index / Ana Sayfa
         public IActionResult Index()
         {
             TempData["Active"] = "aciliyet";
@@ -35,6 +39,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             }
             return View(model);
         }
+        #endregion
+
+        #region Aciliyet Ekle
         public IActionResult EkleAciliyet()
         {
             TempData["Active"] = "aciliyet";
@@ -55,6 +62,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             return View(model);
         }
 
+        #endregion
+
+        #region Aciliyet Güncelle
         public IActionResult GuncelleAciliyet(int id)
         {
             TempData["Active"] = "aciliyet";
@@ -70,7 +80,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult GuncelleAciliyet(AciliyetUpdateViewModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 _aciliyetService.Guncelle(new Aciliyet
                 {
@@ -80,6 +90,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             return View(model);
-        }
+        } 
+        #endregion
     }
 }

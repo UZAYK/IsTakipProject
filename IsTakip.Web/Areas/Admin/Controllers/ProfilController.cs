@@ -12,16 +12,19 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
     public class ProfilController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly UserManager<AppUser> _userManager;
         public ProfilController(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
         }
+        #endregion
+
+        #region Index / Ana Sayfa
         public async Task<IActionResult> Index()
         {
             TempData["Active"] = "profil";
@@ -33,7 +36,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             model.Picture = appUser.Picture;
             model.Email = appUser.Email;
             return View(model);
-        }
+        } 
 
         [HttpPost]
         public async Task<IActionResult> Index(AppUserListViewModel model, IFormFile resim)
@@ -72,5 +75,6 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             }
             return View(model);
         }
+        #endregion
     }
 }

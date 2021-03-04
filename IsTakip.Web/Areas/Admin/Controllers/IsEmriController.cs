@@ -15,6 +15,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class IsEmriController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly IAppUserService _appUserService;
         private readonly IGorevService _gorevService;
         private readonly IDosyaService _dosyaService;
@@ -26,7 +27,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             _userManager = userManager;
             _dosyaService = dosyaService;
         }
+        #endregion
 
+        #region Index / Ana Sayfa
         public IActionResult Index()
         {
             TempData["Active"] = "isemri";
@@ -49,6 +52,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             }
             return View(models);
         }
+        #endregion
+
+        #region Personel Ata
         public IActionResult AtaPersonel(int id, string s, int sayfa = 1)
         {
             TempData["Active"] = "isemri";
@@ -83,6 +89,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             gorevModel.OlusturulmaTarihi = gorev.OlusturulmaTarihi;
             return View(gorevModel);
         }
+        #endregion
+
+        #region Detaylandır
         public IActionResult Detaylandir(int id)
 
         {
@@ -98,18 +107,27 @@ namespace IsTakip.Web.Areas.Admin.Controllers
 
             return View(model);
         }
+        #endregion
+
+        #region Excel İşlemleri
         public IActionResult GetirExcel(int id)
         {
-            return File(_dosyaService.AktarExcel(_gorevService.GetirRaporlarileId(id).Raporlar), 
+            return File(_dosyaService.AktarExcel(_gorevService.GetirRaporlarileId(id).Raporlar),
                 "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Guid.NewGuid() + ".xlsx");
 
         }
+        #endregion
+
+        #region PDF İşlemleri
         public IActionResult GetirPdf(int id)
         {
             var path = _dosyaService.AktarPdf(_gorevService.GetirRaporlarileId(id).Raporlar);
             return File(path, "application/pdf", Guid.NewGuid() + ".pdf");
         }
 
+        #endregion
+
+        #region Personel Ata
         [HttpPost]
         public IActionResult AtaPersonel(PersonelGorevlendirViewModel model)
         {
@@ -120,6 +138,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             _gorevService.Guncelle(guncellenecekGorev);
             return RedirectToAction("Index");
         }
+        #endregion
+
+        #region Personel Görevlendir
         public IActionResult GorevlendirPersonel(PersonelGorevlendirViewModel model)
         {
             TempData["Active"] = "Isemri";
@@ -146,6 +167,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             personelGorevlendirModel.Gorev = gorevModel;
 
             return View(personelGorevlendirModel);
-        }
+        } 
+        #endregion
     }
 }

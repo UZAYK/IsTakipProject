@@ -15,6 +15,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class BildirimController : Controller
     {
+        #region CTOR - DEPENDENCY INJECTION
         private readonly IBildirimService _bildirimService;
         private readonly UserManager<AppUser> _userManager;
         public BildirimController(IBildirimService bildirimService, UserManager<AppUser> userManager)
@@ -22,9 +23,13 @@ namespace IsTakip.Web.Areas.Admin.Controllers
             _bildirimService = bildirimService;
             _userManager = userManager;
         }
+        #endregion
+
+        #region Index / Ana Sayfa
         public async Task<IActionResult> Index()
         {
-           
+            TempData["Active"] = "bildirim";
+
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             var bildirimler = _bildirimService.GetirOkunmayanlar(user.Id);
             List<BildirimListViewModel> models = new List<BildirimListViewModel>();
@@ -40,12 +45,11 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Index(int id)
         {
-            TempData["Active"] = "bildirim";
-
             var guncellenecekBildirim = _bildirimService.GetirIdile(id);
             guncellenecekBildirim.Durum = true;
             _bildirimService.Guncelle(guncellenecekBildirim);
             return RedirectToAction("Index");
-        }
+        } 
+        #endregion
     }
 }
