@@ -62,6 +62,11 @@ namespace IsTakip.Business.Concrete
             return _gorevDal.GetirRaporlarileId(id);
         }
 
+        public int GetirTamamlanmisGorevSayisi()
+        {
+            return _gorevDal.GetirTamamlanmisGorevSayisi();
+        }
+
         public List<Gorev> GetirTumTablolarla()
         {
             return _gorevDal.GetirTumTablolarla();

@@ -9,5 +9,6 @@ namespace IsTakip.DataAccess.Interfaces
     {
         Rapor GetirGorevileId(int id);
         int GetirRaporSayisiilAppUserId(int id);
+        int GetirRaporSayisi();
     }
 }

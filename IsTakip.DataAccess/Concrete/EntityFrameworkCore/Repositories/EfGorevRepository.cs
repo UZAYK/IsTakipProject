@@ -72,13 +72,19 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
         public int GetirGorevSayisiTamamlanmasiGerekenAppUserId(int id)
         {
             using var context = new IsTakipContext();
-            return context.Gorevler.Count((I => I.AppUserId == id && !I.Durum));
+            return context.Gorevler.Count(I => I.AppUserId == id && !I.Durum);
         }
 
         public int GetirAtanmayiBekleyenGorevSayisi()
         {
             using var context = new IsTakipContext();
-            return context.Gorevler.Count((I => I.AppUserId == null && !I.Durum));
+            return context.Gorevler.Count(I => I.AppUserId == null && !I.Durum);
+        }
+
+        public int GetirTamamlanmisGorevSayisi()
+        {
+            using var context = new IsTakipContext();
+            return context.Gorevler.Count(I => I.Durum);
         }
     }
 }

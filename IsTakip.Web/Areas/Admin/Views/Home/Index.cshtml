@@ -9,16 +9,16 @@
     <div class="col-md-6">
 
         <div class="card text-white bg-dark mb-3 my-3">
-            <div class="card-header">Atanmayı bekleyen</div>
+            <div class="card-header">Personellere atanmayı bekleyen</div>
             <div class="card-body">
                 <h4 class="card-title font-weight-bold text-center">GÖREV SAYISI</h4>
                 @if (ViewBag.AtanmayiBekleyenGorevSayisi > 0)
                 {
-                    <p class="card-text font-weight-bold text-center" style="font-size:20px;">@ViewBag..AtanmayiBekleyenGorevSayisi</p>
-                    @*<p class="text-right " style="font-size:12px;">
-                        İncelemek için <a asp-action="Index" asp-controller="Gorev"
+                    <p class="card-text font-weight-bold text-center" style="font-size:20px;">@ViewBag.AtanmayiBekleyenGorevSayisi</p>
+                    <p class="text-right " style="font-size:12px;">
+                        İncelemek için <a asp-action="Index" asp-controller="IsEmri"
                                           class="text-white font-italic font-weight-bold" style="text-decoration:underline"> Tıklayınız </a>
-                    </p>*@
+                    </p>
                 }
                 else
                 {
@@ -32,20 +32,16 @@
     <div class="col-md-6">
 
         <div class="card text-white bg-dark mb-3 my-3">
-            <div class="card-header">Tamamlamamış olduğunuz</div>
+            <div class="card-header">Personellerin tamamladığı</div>
             <div class="card-body">
                 <h4 class="card-title font-weight-bold text-center">GÖREV SAYISI</h4>
-                @if (ViewBag.TamamlanmasiGerekenGorevSayisi > 0)
+                @if (ViewBag.TamamlanmisGorevSayisi > 0)
                 {
-                    <p class="card-text font-weight-bold text-center" style="font-size:20px;">@ViewBag.TamamlanmasiGerekenGorevSayisi</p>
-                    <p class="text-right " style="font-size:12px;">
-                        Tamamlamak için <a asp-action="Index" asp-controller="IsEmri"
-                                           class="text-white font-italic font-weight-bold" style="text-decoration:underline"> Tıklayınız </a>
-                    </p>
+                    <p class="card-text font-weight-bold text-center" style="font-size:20px;">@ViewBag.TamamlanmisGorevSayisi</p>
                 }
                 else
                 {
-                    <p class="card-text font-weight-bold text-center p-4" style="font-size:12px;">Herhangi bir iş emriniz bulunmamaktadır.</p>
+                    <p class="card-text font-weight-bold text-center p-4" style="font-size:12px;">Herhangi bir görev henüz tamamlanmamış.</p>
                 }
             </div>
 
@@ -55,20 +51,20 @@
     <div class="col-md-6">
 
         <div class="card text-white bg-dark mb-3 my-3">
-            <div class="card-header">Yazmış olduğunuz</div>
+            <div class="card-header">Yazılan Toplam</div>
             <div class="card-body">
                 <h4 class="card-title font-weight-bold text-center">RAPOR SAYISI</h4>
-                @if (ViewBag.RaporSayisi > 0)
+                @if (ViewBag.ToplamRaporSayisi > 0)
                 {
-                    <p class="card-text font-weight-bold text-center " style="font-size:20px;">@ViewBag.RaporSayisi</p>
+                    <p class="card-text font-weight-bold text-center " style="font-size:20px;">@ViewBag.ToplamRaporSayisi</p>
                     <p class=" text-right" style="font-size:12px;">
-                        İncelemek için <a asp-action="Index" asp-controller="IsEmri"
+                        İncelemek için <a asp-action="Index" asp-controller="Bildirim"
                                           class="text-white font-italic font-weight-bold" style="text-decoration:underline"> Tıklayınız </a>
                     </p>
                 }
                 else
                 {
-                    <p class="card-text font-weight-bold text-center p-4" style="font-size:12px;">Herhangi bir rapor yazmamışsınız.</p>
+                    <p class="card-text font-weight-bold text-center p-4" style="font-size:12px;">Herhangi bir rapor yazılmamış.</p>
                 }
             </div>
 

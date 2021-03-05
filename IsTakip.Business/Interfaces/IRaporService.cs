@@ -9,6 +9,6 @@ namespace IsTakip.Business.Interfaces
     {
         Rapor GetirGorevileId(int id);
         int GetirRaporSayisiilAppUserId(int id);
-
+        int GetirRaporSayisi();
     }
 }

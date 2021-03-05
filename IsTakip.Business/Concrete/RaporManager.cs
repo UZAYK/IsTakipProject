@@ -30,6 +30,11 @@ namespace IsTakip.Business.Concrete
             return _raporDal.GetirIdile(id);
         }
 
+        public int GetirRaporSayisi()
+        {
+            return _raporDal.GetirRaporSayisi();
+        }
+
         public int GetirRaporSayisiilAppUserId(int id)
         {
             return _raporDal.GetirRaporSayisiilAppUserId(id);
