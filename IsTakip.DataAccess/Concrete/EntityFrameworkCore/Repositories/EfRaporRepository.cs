@@ -14,7 +14,15 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
         public Rapor GetirGorevileId(int id)
         {
             using var context = new IsTakipContext();
-            return context.Raporlar.Include(I => I.Gorev).ThenInclude(I=>I.Aciliyet).Where(I => I.Id == id).FirstOrDefault();
+            return context.Raporlar.Include(I => I.Gorev).ThenInclude(I => I.Aciliyet).Where(I => I.Id == id).FirstOrDefault();
+        }
+
+        public int GetirRaporSayisiilAppUserId(int id)
+        {
+            using var context = new IsTakipContext();
+            var result = context.Gorevler.Include(I => I.Raporlar).Where(I => I.AppUserId == id);
+
+            return result.SelectMany(I => I.Raporlar).Count();
         }
     }
 }
