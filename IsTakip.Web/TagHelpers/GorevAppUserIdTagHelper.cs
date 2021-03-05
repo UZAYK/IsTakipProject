@@ -24,7 +24,7 @@ namespace IsTakip.Web.TagHalpers
             int ustundeCalistigiGorevSayisi = gorevler.Where(I => !I.Durum).Count();
             string htmlString = 
                 $"Tamamladığı görev sayısı :{tamamlananGorevSayisi}" +
-                $"<br> Tamamladığı görev sayısı :{ustundeCalistigiGorevSayisi}";
+                $"<br>Üzerinde çalıştığı görev sayısı :{ustundeCalistigiGorevSayisi}";
 
             output.Content.SetHtmlContent(htmlString);
         }

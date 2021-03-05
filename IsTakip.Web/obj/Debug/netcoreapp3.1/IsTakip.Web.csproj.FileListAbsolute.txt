@@ -463,3 +463,4 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\I
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Member\Views\Gorev\Index.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Bildirim\Index.cshtml.g.cs
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Member\Views\Bildirim\Index.cshtml.g.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Grafik\Index.cshtml.g.cs
