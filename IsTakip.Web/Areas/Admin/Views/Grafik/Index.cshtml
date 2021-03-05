@@ -3,54 +3,76 @@
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
+<div class="row">
 
-<div id="piechart" style="width: 900px; height: 500px;"></div>
-<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <div class="col-md-6">
+        <div id="piechart_3d" class="w-100" style=" height: 500px;"></div>
+    </div>
+
+    <div class="col-md-6">
+        <div id="piechart" class="w-100" style="height: 500px;"></div>
+    </div>
+
+</div>
+
 
 @section JavaScript{
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
+       
         google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart() {
-            var array = [];
 
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Work', 11],
-                ['Eat', 2],
-                ['Commute', 2],
-                ['Watch TV', 2],
-                ['Sleep', 7]
-            ]);
+            let enCokIsTamamlayan = [['Personel Adı', 'Görev Sayısı']];
+
+            $.ajax({
+                type: "Get",
+                url: "./Grafik/EnCokTamamlayan",
+                async: false,
+                success: function (data) {
+                    let gelenObje = jQuery.parseJSON(data);
+                    $.each(gelenObje, (index, value) => {
+                        enCokIsTamamlayan.push([value.Isim, value.GorevSayisi]);
+                    });
+                }
+            })
+
+            var data = google.visualization.arrayToDataTable(enCokIsTamamlayan);
 
             var options = {
-                title: 'My Daily Activities'
+                title: 'En çok iş tamamlayan 5 personel'
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
             chart.draw(data, options);
         }
-    </script>
-    
-    <script type="text/javascript">
+   
         google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Work', 11],
-                ['Eat', 2],
-                ['Commute', 2],
-                ['Watch TV', 2],
-                ['Sleep', 7]
-            ]);
+        google.charts.setOnLoadCallback(drawChart2);
+        function drawChart2() {
+
+            let enCokCalisan = [['Personel Adı', 'Görev Sayısı']];
+
+            $.ajax({
+                type: "Get",
+                url: "./Grafik/EnCokCalisan",
+                async: false,
+                success: function (data) {
+                    let gelenObje2 = jQuery.parseJSON(data);
+                    $.each(gelenObje2, (index, value) => {
+                        enCokCalisan.push([value.Isim, value.GorevSayisi]);
+                    });
+                }
+            })
+
+            var data = google.visualization.arrayToDataTable(enCokCalisan);
 
             var options = {
-                title: 'My Daily Activities',
+                title: 'Şu an Görevde Çalışan Personeller',
                 is3D: true,
             };
 
