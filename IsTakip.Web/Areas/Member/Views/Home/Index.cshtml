@@ -4,11 +4,52 @@
     Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
 }
 
-<div class="card text-white bg-dark mb-3 my-3" style="max-width: 20rem;">
-    <div class="card-header">Yazmış olduğunuz</div>
-    <div class="card-body">
-        <h4 class="card-title font-weight-bold text-center">RAPOR SAYISI</h4>
-        <p class="card-text font-weight-bold text-center" style="font-size:20px;">@ViewBag.RaporSayisi</p>
-    </div>
-</div>
+<div class="row">
 
+    <div class="col-md-6">
+
+        <div class="card text-white bg-dark mb-3 my-3">
+            <div class="card-header">Yazmış olduğunuz</div>
+            <div class="card-body">
+                <h4 class="card-title font-weight-bold text-center">RAPOR SAYISI</h4>
+                @if (ViewBag.RaporSayisi > 0)
+                {
+                    <p class="card-text font-weight-bold text-center" style="font-size:20px;">@ViewBag.RaporSayisi</p>
+                    <p class=" text-right" style="font-size:12px;">İncelemek için <a asp-action="Index" asp-controller="IsEmri" 
+                       class="text-white font-italic font-weight-bold" style="text-decoration:underline"> Tıklayınız </a></p>
+                }
+                else
+                {
+                    <p class="card-text font-weight-bold text-center" style="font-size:20px;">Herhangi bir rapor yazmamışsınız.</p>
+                }
+            </div>
+
+
+        </div>
+
+    </div> 
+    <div class="col-md-6">
+
+        <div class="card text-white bg-dark mb-3 my-3">
+            <div class="card-header">Tamamlamış olduğunuz</div>
+            <div class="card-body">
+                <h4 class="card-title font-weight-bold text-center">GÖREV SAYISI</h4>
+                @if (ViewBag.TamamlananGorevSayisi > 0)
+                {
+                    <p class="card-text font-weight-bold text-center" style="font-size:20px;">@ViewBag.TamamlananGorevSayisi</p>
+                    <p class="text-right " style="font-size:12px;">İncelemek için <a asp-action="Index" asp-controller="Gorev" 
+                       class="text-white font-italic font-weight-bold" style="text-decoration:underline"> Tıklayınız </a></p>
+                }
+                else
+                {
+            <p class="card-text font-weight-bold text-center" style="font-size:20px;">Henüz hiçbir görevi tamamlamamışsınız.</p>
+                }
+            </div>
+
+
+        </div>
+
+    </div>
+
+  
+</div>

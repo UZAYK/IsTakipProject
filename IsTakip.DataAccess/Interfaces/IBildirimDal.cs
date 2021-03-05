@@ -8,5 +8,7 @@ namespace IsTakip.DataAccess.Interfaces
     public interface IBildirimDal : IGenericDal<Bildirim>
     {
         List<Bildirim> GetirOkunmayanlar(int appUserId);
+        int GetirOkunmayanSayisiileAppUserId(int appUserId);
+
     }
 }

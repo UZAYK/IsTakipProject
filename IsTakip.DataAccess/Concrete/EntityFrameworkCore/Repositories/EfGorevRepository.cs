@@ -58,9 +58,15 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
             var returnValue = context.Gorevler.Include(I => I.Aciliyet).Include(I => I.Raporlar).Include(I => I.AppUser)
                  .Where(I => I.AppUserId == userId && I.Durum).OrderByDescending(I => I.OlusturulmaTarihi);
 
-            toplamSayfa =(int) Math.Ceiling((double)returnValue.Count() / 3);
+            toplamSayfa = (int)Math.Ceiling((double)returnValue.Count() / 3);
 
             return returnValue.Skip((aktifSayfa - 1) * 3).Take(3).ToList();
+        }
+
+        public int GetirGorevSayisiTamamlananileAppUserId(int id)
+        {
+            using var context = new IsTakipContext();
+            return context.Gorevler.Count((I => I.AppUserId == id && I.Durum));
         }
     }
 }

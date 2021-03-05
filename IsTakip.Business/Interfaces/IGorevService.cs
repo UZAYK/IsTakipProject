@@ -16,5 +16,7 @@ namespace IsTakip.Business.Interfaces
         List<Gorev> GetirTumTablolarla(Expression<Func<Gorev, bool>> filter);
         List<Gorev> GetirTumTablolarlaTamamlanmayan(out int toplamSayfa, int userId, int aktifSayfa=1);
 
+        int GetirGorevSayisiTamamlananileAppUserId(int id);
+
     }
 }
