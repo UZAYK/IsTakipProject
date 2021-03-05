@@ -71,7 +71,7 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
             }).ToList();
 
         }
-        public List<DualHalper> EnCokGorevTamamlamisPersoneller()
+        public List<DualHalper> GetirEnCokGorevTamamlamisPersoneller()
         {
             using var context = new IsTakipContext();
             return context.Gorevler.Include(I => I.AppUser).Where(I => I.Durum).GroupBy(I => I.AppUser.UserName).OrderByDescending(I => I.Count())
@@ -81,7 +81,7 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
                      GorevSayisi = I.Count()
                  }).ToList();
         }
-        public List<DualHalper> EnCokGorevdeCalisanPersoneller()
+        public List<DualHalper> GetirEnCokGorevdeCalisanPersoneller()
         {
             using var context = new IsTakipContext();
             return context.Gorevler.Include(I => I.AppUser).Where(I => !I.Durum && I.AppUserId != null).GroupBy(I => I.AppUser.UserName).OrderByDescending(I => I.Count())

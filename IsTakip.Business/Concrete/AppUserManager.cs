@@ -23,5 +23,15 @@ namespace IsTakip.Business.Concrete
         {
             return _userDal.GetirAdminOlmayanlar(out toplamSayfa, aranacakKelime, aktifSayfa);
         }
+
+        public List<DualHalper> GetirEnCokGorevdeCalisanPersoneller()
+        {
+            return _userDal.GetirEnCokGorevdeCalisanPersoneller();
+        }
+
+        public List<DualHalper> GetirEnCokGorevTamamlamisPersoneller()
+        {
+            return _userDal.GetirEnCokGorevTamamlamisPersoneller();
+        }
     }
 }
