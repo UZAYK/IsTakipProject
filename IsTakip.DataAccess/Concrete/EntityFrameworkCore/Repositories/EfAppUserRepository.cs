@@ -1,6 +1,7 @@
 ﻿using IsTakip.DataAccess.Concrete.EntityFrameworkCore.Context;
 using IsTakip.DataAccess.Interfaces;
 using IsTakip.Entities.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
                 Email = I.user.Email,
                 UserName = I.user.UserName
             });
-            toplamSayfa = (int)Math.Ceiling((double)result.Count() / 3 );
+            toplamSayfa = (int)Math.Ceiling((double)result.Count() / 3);
 
             if (!string.IsNullOrWhiteSpace(aranacakKelime))
             {
@@ -70,5 +71,26 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
             }).ToList();
 
         }
+        public List<DualHalper> EnCokGorevTamamlamisPersoneller()
+        {
+            using var context = new IsTakipContext();
+            return context.Gorevler.Include(I => I.AppUser).Where(I => I.Durum).GroupBy(I => I.AppUser.UserName).OrderByDescending(I => I.Count())
+                 .Take(5).Select(I => new DualHalper
+                 {
+                     Isim = I.Key,
+                     GorevSayisi = I.Count()
+                 }).ToList();
+        }
+        public List<DualHalper> EnCokGorevdeCalisanPersoneller()
+        {
+            using var context = new IsTakipContext();
+            return context.Gorevler.Include(I => I.AppUser).Where(I => !I.Durum && I.AppUserId != null).GroupBy(I => I.AppUser.UserName).OrderByDescending(I => I.Count())
+                  .Take(5).Select(I => new DualHalper
+                  {
+                      Isim = I.Key,
+                      GorevSayisi = I.Count()
+                  }).ToList();
+        }
+
     }
 }
