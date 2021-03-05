@@ -17,12 +17,15 @@ namespace IsTakip.Web.Areas.Member.Controllers
         #region CTOR - DEPENDENCY INJECTION
         private readonly IRaporService _raporService;
         private readonly IGorevService _gorevService;
+        private readonly IBildirimService _bildirimService;
         private readonly UserManager<AppUser> _userManager;
-        public HomeController(IRaporService raporService, UserManager<AppUser> userManager, IGorevService gorevService)
+        public HomeController(IRaporService raporService, UserManager<AppUser> userManager, IGorevService gorevService, 
+                              IBildirimService bildirimService)
         {
             _raporService = raporService;
             _userManager = userManager;
             _gorevService = gorevService;
+            _bildirimService = bildirimService;
         }
         #endregion
 
@@ -35,6 +38,8 @@ namespace IsTakip.Web.Areas.Member.Controllers
 
             ViewBag.RaporSayisi = _raporService.GetirRaporSayisiilAppUserId(user.Id);
             ViewBag.TamamlananGorevSayisi = _gorevService.GetirGorevSayisiTamamlananileAppUserId(user.Id);
+            ViewBag.TamamlanmasiGerekenGorevSayisi = _gorevService.GetirGorevSayisiTamamlanmasiGerekenAppUserId(user.Id);
+            ViewBag.OkunmamisBildirimSayisi = _bildirimService.GetirOkunmayanSayisiileAppUserId(user.Id);
 
             return View();
         } 

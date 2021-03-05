@@ -32,6 +32,11 @@ namespace IsTakip.Business.Concrete
             return _gorevDal.GetirGorevSayisiTamamlananileAppUserId(id);
         }
 
+        public int GetirGorevSayisiTamamlanmasiGerekenAppUserId(int id)
+        {
+            return _gorevDal.GetirGorevSayisiTamamlanmasiGerekenAppUserId(id);
+        }
+
         public List<Gorev> GetirHepsi()
         {
             return _gorevDal.GetirHepsi();

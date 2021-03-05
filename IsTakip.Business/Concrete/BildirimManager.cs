@@ -12,6 +12,7 @@ namespace IsTakip.Business.Concrete
         {
             _bildirimDal = bildirimDal;
         }
+
         public List<Bildirim> GetirHepsi()
         {
             return _bildirimDal.GetirHepsi();
@@ -25,6 +26,11 @@ namespace IsTakip.Business.Concrete
         public List<Bildirim> GetirOkunmayanlar(int appUserId)
         {
             return _bildirimDal.GetirOkunmayanlar(appUserId);
+        }
+
+        public int GetirOkunmayanSayisiileAppUserId(int appUserId)
+        {
+            return _bildirimDal.GetirOkunmayanSayisiileAppUserId(appUserId);
         }
 
         public void Guncelle(Bildirim tablo)

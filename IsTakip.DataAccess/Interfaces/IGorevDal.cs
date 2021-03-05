@@ -18,6 +18,6 @@ namespace IsTakip.DataAccess.Interfaces
         Gorev GetirRaporlarileId(int id);
 
         int GetirGorevSayisiTamamlananileAppUserId(int id);
-
+        int GetirGorevSayisiTamamlanmasiGerekenAppUserId(int id);
     }
 }

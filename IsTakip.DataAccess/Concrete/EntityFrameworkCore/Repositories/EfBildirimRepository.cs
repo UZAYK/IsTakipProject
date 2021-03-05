@@ -13,5 +13,11 @@ namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
             using var context = new IsTakipContext();
             return context.Bildirimler.Where(I => I.AppUserId == appUserId && !I.Durum).ToList();
         }
+
+        public int GetirOkunmayanSayisiileAppUserId(int appUserId)
+        {
+            using var context = new IsTakipContext();
+            return context.Bildirimler.Count(I => I.AppUserId == appUserId && !I.Durum);
+        }
     }
 }

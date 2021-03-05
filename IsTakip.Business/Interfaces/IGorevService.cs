@@ -17,6 +17,7 @@ namespace IsTakip.Business.Interfaces
         List<Gorev> GetirTumTablolarlaTamamlanmayan(out int toplamSayfa, int userId, int aktifSayfa=1);
 
         int GetirGorevSayisiTamamlananileAppUserId(int id);
+        int GetirGorevSayisiTamamlanmasiGerekenAppUserId(int id);
 
     }
 }
