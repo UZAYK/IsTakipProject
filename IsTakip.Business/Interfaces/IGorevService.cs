@@ -18,6 +18,7 @@ namespace IsTakip.Business.Interfaces
 
         int GetirGorevSayisiTamamlananileAppUserId(int id);
         int GetirGorevSayisiTamamlanmasiGerekenAppUserId(int id);
+        int GetirAtanmayiBekleyenGorevSayisi();
 
     }
 }

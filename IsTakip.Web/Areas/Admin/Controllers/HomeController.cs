@@ -15,11 +15,10 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     public class HomeController : Controller
     {
         #region CTOR - DEPENDENCY INJECTION
-        private readonly IRaporService _raporService;
+        private readonly IGorevService _gorevService;
         private readonly UserManager<AppUser> _userManager;
         public HomeController(IRaporService raporService, UserManager<AppUser> userManager)
         {
-            _raporService = raporService;
             _userManager = userManager;
         }
         #endregion
@@ -29,9 +28,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         {
             TempData["Active"] = "anasayfa";
 
-            //var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
 
-            //ViewBag.RaporSayisi = _raporService.GetirRaporSayisiilAppUserId(user.Id);
+            ViewBag.AtanmayiBekleyenGorevSayisi = _gorevService.GetirAtanmayiBekleyenGorevSayisi();
 
             return View();
         }

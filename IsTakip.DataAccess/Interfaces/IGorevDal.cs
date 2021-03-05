@@ -19,5 +19,6 @@ namespace IsTakip.DataAccess.Interfaces
 
         int GetirGorevSayisiTamamlananileAppUserId(int id);
         int GetirGorevSayisiTamamlanmasiGerekenAppUserId(int id);
+        int GetirAtanmayiBekleyenGorevSayisi();
     }
 }
