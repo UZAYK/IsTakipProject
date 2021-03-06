@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <Compile Remove="ValidationRules\FluentValidation\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <EmbeddedResource Remove="ValidationRules\FluentValidation\**" />
+    <None Remove="NewFolder\**" />
+    <None Remove="ValidationRules\FluentValidation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EPPlus" Version="5.5.5" />
     <PackageReference Include="FastMember" Version="1.5.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.1" />
