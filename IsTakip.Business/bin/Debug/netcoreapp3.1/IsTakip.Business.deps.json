@@ -11,6 +11,7 @@
           "EPPlus": "5.5.5",
           "FastMember": "1.5.0",
           "FluentValidation.AspNetCore": "9.5.1",
+          "IsTakip.DTO": "1.0.0",
           "IsTakip.DataAccess": "1.0.0",
           "iTextSharp.LGPLv2.Core": "1.7.1"
         },
@@ -1691,6 +1692,14 @@
           "IsTakip.DataAccess.dll": {}
         }
       },
+      "IsTakip.DTO/1.0.0": {
+        "dependencies": {
+          "IsTakip.Entities": "1.0.0"
+        },
+        "runtime": {
+          "IsTakip.DTO.dll": {}
+        }
+      },
       "IsTakip.Entities/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.11"
@@ -2891,6 +2900,11 @@
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
     "IsTakip.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IsTakip.DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

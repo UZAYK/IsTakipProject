@@ -12,3 +12,5 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.csproj.CopyComplete
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.dll
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\obj\Debug\netcoreapp3.1\IsTakip.Business.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.DTO.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Business\bin\Debug\netcoreapp3.1\IsTakip.DTO.pdb

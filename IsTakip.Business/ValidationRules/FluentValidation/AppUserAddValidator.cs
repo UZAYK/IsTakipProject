@@ -19,7 +19,7 @@ namespace IsTakip.Business.ValidationRules.FluentValidation
 
             RuleFor(I => I.Name).NotNull().WithMessage("Ad alanı boş geçilemez");
 
-            RuleFor(I => I.Surname).NotNull().WithMessage("Soyad alanı boş geçilemez");
+            RuleFor(I => I.SurName).NotNull().WithMessage("Soyad alanı boş geçilemez");
         }
     }
 }

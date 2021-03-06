@@ -1,5 +1,4 @@
-﻿
-namespace IsTakip.DTO.DTOs.BilirimDtos
+﻿namespace IsTakip.DTO.DTOs.BildirimDtos
 {
     public class BildirimListDto
     {

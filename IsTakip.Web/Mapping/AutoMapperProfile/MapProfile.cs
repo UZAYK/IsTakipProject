@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
 using IsTakip.DTO.DTOs.AciliyetDTOs;
 using IsTakip.DTO.DTOs.AppUserDtos;
-using IsTakip.DTO.DTOs.BilirimDtos;
+using IsTakip.DTO.DTOs.BildirimDtos;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.DTO.DTOs.RaporDtos;
 using IsTakip.Entities.Concrete;
-using IsTakip.Web.Models;
 
 namespace IsTakip.Web.Mapping.AutoMapperProfile
 {
@@ -42,10 +41,13 @@ namespace IsTakip.Web.Mapping.AutoMapperProfile
 
             #region Gorev-GorevDto
             CreateMap<GorevAddDto, Gorev>();
-            CreateMap<Gorev, GorevAddDto>();
-
+            CreateMap<Gorev, GorevAddDto>(); 
+            
             CreateMap<GorevListDto, Gorev>();
-            CreateMap<Gorev, GorevListDto>();
+            CreateMap<Gorev, GorevListDto>(); 
+            
+            CreateMap<GorevListAllDto, Gorev>();
+            CreateMap<Gorev, GorevListAllDto>();
 
             CreateMap<GorevUpdateDto, Gorev>();
             CreateMap<Gorev, GorevUpdateDto>();

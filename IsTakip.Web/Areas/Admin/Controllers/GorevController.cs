@@ -1,4 +1,6 @@
-﻿using IsTakip.Business.Interfaces;
+﻿using AutoMapper;
+using IsTakip.Business.Interfaces;
+using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -18,10 +20,12 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region CTOR - DEPENDENCY INJECTION
         private readonly IGorevService _gorevService;
         private readonly IAciliyetService _aciliyetService;
-        public GorevController(IGorevService gorevService, IAciliyetService aciliyetService)
+        private readonly IMapper _mapper;
+        public GorevController(IGorevService gorevService, IAciliyetService aciliyetService, IMapper mapper)
         {
             _gorevService = gorevService;
             _aciliyetService = aciliyetService;
+            _mapper = mapper;
         }
 
         #endregion
@@ -31,23 +35,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         {
             TempData["Active"] = "gorev";
 
-            List<Gorev> gorevler = _gorevService.GetirIdAciliyetTamamlanmayan();
-            List<GorevListViewModel> models = new List<GorevListViewModel>();
-            foreach (var item in gorevler)
-            {
-                GorevListViewModel model = new GorevListViewModel
-                {
-                    Aciklama = item.Aciklama,
-                    Aciliyet = item.Aciliyet,
-                    Ad = item.Ad,
-                    AciliyetId = item.AciliyetId,
-                    Durum = item.Durum,
-                    Id = item.Id,
-                    OlusturulmaTarihi = item.OlusturulmaTarihi,
-                };
-                models.Add(model);
-            }
-            return View(models);
+            return View(_mapper.Map<List<GorevListDto>>(_gorevService.GetirIdAciliyetTamamlanmayan()));
         }
         #endregion
 
@@ -56,11 +44,11 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         {
             TempData["Active"] = "gorev";
             ViewBag.Aciliyetler = new SelectList(_aciliyetService.GetirHepsi(), "Id", "Tanim");
-            return View(new GorevAddViewModel());
+            return View(new GorevAddDto());
         }
 
         [HttpPost]
-        public IActionResult EkleGorev(GorevAddViewModel model)
+        public IActionResult EkleGorev(GorevAddDto model)
         {
             if (ModelState.IsValid)
             {
@@ -81,23 +69,15 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         public IActionResult GuncelleGorev(int id)
         {
             TempData["Active"] = "gorev";
-
             var gorev = _gorevService.GetirIdile(id);
-            GorevUpdateViewModel model = new GorevUpdateViewModel
-            {
-                Id = gorev.Id,
-                AciliyetId = gorev.AciliyetId,
-                Ad = gorev.Ad,
-                Aciklama = gorev.Aciklama
-            };
             ViewBag.Aciliyetler = new SelectList(_aciliyetService.GetirHepsi(),
                 "Id", "Tanim", gorev.AciliyetId);
 
-            return View(model);
+            return View(_mapper.Map<GorevUpdateDto>(gorev));
 
         }
         [HttpPost]
-        public IActionResult GuncelleGorev(GorevUpdateViewModel model)
+        public IActionResult GuncelleGorev(GorevUpdateDto model)
         {
             if (ModelState.IsValid)
             {
@@ -109,8 +89,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
                     AciliyetId = model.AciliyetId,
                 });
                 return RedirectToAction("Index");
-            } 
-
+            }
+            ViewBag.Aciliyetler = new SelectList(_aciliyetService.GetirHepsi(),
+               "Id", "Tanim", model.AciliyetId);
             return View(model);
         }
         #endregion

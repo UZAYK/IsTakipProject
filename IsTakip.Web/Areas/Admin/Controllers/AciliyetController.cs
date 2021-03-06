@@ -1,4 +1,6 @@
-﻿using IsTakip.Business.Interfaces;
+﻿using AutoMapper;
+using IsTakip.Business.Interfaces;
+using IsTakip.DTO.DTOs.AciliyetDTOs;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -16,9 +18,11 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     {
         #region CTOR - DEPENDENCY INJECTION
         private readonly IAciliyetService _aciliyetService;
-        public AciliyetController(IAciliyetService aciliyetService)
+        private readonly IMapper _mapper;
+        public AciliyetController(IAciliyetService aciliyetService, IMapper mapper)
         {
             _aciliyetService = aciliyetService;
+            _mapper = mapper;
         }
         #endregion
 
@@ -26,18 +30,8 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         public IActionResult Index()
         {
             TempData["Active"] = "aciliyet";
-            List<Aciliyet> aciliyetler = _aciliyetService.GetirHepsi();
 
-            List<AciliyetListViewModel> model = new List<AciliyetListViewModel>();
-            foreach (var item in aciliyetler)
-            {
-                AciliyetListViewModel aciliyetModel = new AciliyetListViewModel();
-                aciliyetModel.Id = item.Id;
-                aciliyetModel.Tanim = item.Tanim;
-
-                model.Add(aciliyetModel);
-            }
-            return View(model);
+            return View(_mapper.Map<List<AciliyetListDto>>(_aciliyetService.GetirHepsi()));
         }
         #endregion
 
@@ -45,11 +39,11 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         public IActionResult EkleAciliyet()
         {
             TempData["Active"] = "aciliyet";
-            return View(new AciliyetAddViewModel());
+            return View(new AciliyetAddDto());
         }
 
         [HttpPost]
-        public IActionResult EkleAciliyet(AciliyetAddViewModel model)
+        public IActionResult EkleAciliyet(AciliyetAddDto model)
         {
             if (ModelState.IsValid)
             {
@@ -68,17 +62,12 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         public IActionResult GuncelleAciliyet(int id)
         {
             TempData["Active"] = "aciliyet";
-            var aciliyet = _aciliyetService.GetirIdile(id);
-            AciliyetUpdateViewModel model = new AciliyetUpdateViewModel
-            {
-                Id = aciliyet.Id,
-                Tanim = aciliyet.Tanim,
-            };
-            return View(model);
+           
+            return View(_mapper.Map<AciliyetUpdateDto>(_aciliyetService.GetirIdile(id)));
         }
 
         [HttpPost]
-        public IActionResult GuncelleAciliyet(AciliyetUpdateViewModel model)
+        public IActionResult GuncelleAciliyet(AciliyetUpdateDto model)
         {
             if (ModelState.IsValid)
             {

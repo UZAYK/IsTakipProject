@@ -1,11 +1,11 @@
-﻿using IsTakip.Entities.Concrete;
-using IsTakip.Web.Areas.Admin.Models;
+﻿using AutoMapper;
+using IsTakip.DTO.DTOs.AppUserDtos;
+using IsTakip.Entities.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,10 +17,13 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     public class ProfilController : Controller
     {
         #region CTOR - DEPENDENCY INJECTION
+
         private readonly UserManager<AppUser> _userManager;
-        public ProfilController(UserManager<AppUser> userManager)
+        private readonly IMapper _mapper;
+        public ProfilController(UserManager<AppUser> userManager, IMapper mapper)
         {
             _userManager = userManager;
+            _mapper = mapper;
         }
         #endregion
 
@@ -28,18 +31,12 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             TempData["Active"] = "profil";
-            var appUser = await _userManager.FindByNameAsync(User.Identity.Name);
-            AppUserListViewModel model = new AppUserListViewModel();
-            model.Id = appUser.Id;
-            model.Name = appUser.Name;
-            model.SurName = appUser.SurName;
-            model.Picture = appUser.Picture;
-            model.Email = appUser.Email;
-            return View(model);
+
+            return View(_mapper.Map<AppUserListDto>(await _userManager.FindByNameAsync(User.Identity.Name))); 
         } 
 
         [HttpPost]
-        public async Task<IActionResult> Index(AppUserListViewModel model, IFormFile resim)
+        public async Task<IActionResult> Index(AppUserListDto model, IFormFile resim)
         {
             if (ModelState.IsValid)
             {

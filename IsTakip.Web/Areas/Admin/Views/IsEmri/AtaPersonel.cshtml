@@ -1,4 +1,4 @@
-﻿@model GorevListViewModel
+﻿@model GorevListDto
 @{
     ViewData["Title"] = "AtaPersonel";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
@@ -31,7 +31,7 @@
                 <p class="card-text">
                     <strong> Aciliyet Durumu: </strong>
 
-                    <span class="badge badge-danger">@Model.Aciliyet.Tanim</span>
+                    <span class="badge badge-danger mt-1 ">@Model.Aciliyet.Tanim</span>
                 </p>
 
                 <p><small>@Model.OlusturulmaTarihi.ToString("D")</small></p>
@@ -43,7 +43,7 @@
 
     <div class="col md-8 m-1">
 
-        @foreach (var item in (List<AppUserListViewModel>)ViewBag.Personeller)
+        @foreach (var item in (List<AppUserListDto>)ViewBag.Personeller)
         {
             <div class="card border border-primary mb-3 pt-1 shadow">
                 <div class="row g-0">

@@ -7,3 +7,6 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DTO\obj\Debug\netcoreapp3.1\I
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DTO\obj\Debug\netcoreapp3.1\IsTakip.DTO.csproj.CoreCompileInputs.cache
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DTO\obj\Debug\netcoreapp3.1\IsTakip.DTO.dll
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DTO\obj\Debug\netcoreapp3.1\IsTakip.DTO.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DTO\bin\Debug\netcoreapp3.1\IsTakip.Entities.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DTO\bin\Debug\netcoreapp3.1\IsTakip.Entities.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.DTO\obj\Debug\netcoreapp3.1\IsTakip.DTO.csproj.CopyComplete
