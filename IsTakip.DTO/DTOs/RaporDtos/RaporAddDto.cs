@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IsTakip.DTO.DTOs.RaporDtos
+﻿namespace IsTakip.DTO.DTOs.RaporDtos
 {
-   public class RaporAddDto
+    public class RaporAddDto
     {
         public int GorevId { get; set; }
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace IsTakip.Web.Models
+﻿namespace IsTakip.DTO.DTOs.AppUserDtos
 {
     public class AppUserAddDto
     {

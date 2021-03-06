@@ -32,6 +32,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj"
+              },
               "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DTO\\IsTakip.DTO.csproj": {
                 "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DTO\\IsTakip.DTO.csproj"
               }
@@ -87,6 +90,90 @@
         }
       }
     },
+    "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj",
+        "projectName": "IsTakip.DataAccess",
+        "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\uzayk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\uzayk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Entities\\IsTakip.Entities.csproj": {
+                "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Entities\\IsTakip.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DTO\\IsTakip.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -95,6 +182,68 @@
         "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DTO\\IsTakip.DTO.csproj",
         "packagesPath": "C:\\Users\\uzayk\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\uzayk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Entities\\IsTakip.Entities.csproj": {
+                "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Entities\\IsTakip.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Entities\\IsTakip.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Entities\\IsTakip.Entities.csproj",
+        "projectName": "IsTakip.Entities",
+        "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Entities\\IsTakip.Entities.csproj",
+        "packagesPath": "C:\\Users\\uzayk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -126,6 +275,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -189,6 +344,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.12, )"

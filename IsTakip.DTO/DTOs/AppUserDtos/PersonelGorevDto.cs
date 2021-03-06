@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IsTakip.DTO.DTOs.AppUserDtos
+﻿namespace IsTakip.DTO.DTOs.AppUserDtos
 {
     public class PersonelGorevDto
     {

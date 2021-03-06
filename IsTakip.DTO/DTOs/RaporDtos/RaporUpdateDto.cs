@@ -1,4 +1,4 @@
-﻿namespace IsTakip.Web.Areas.Admin.Models
+﻿namespace IsTakip.DTO.DTOs.RaporDtos
 {
     public class RaporUpdateDto
     {

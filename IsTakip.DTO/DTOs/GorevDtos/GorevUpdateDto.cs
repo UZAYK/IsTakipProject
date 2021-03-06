@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IsTakip.DTO.DTOs.GorevDtos
+﻿namespace IsTakip.DTO.DTOs.GorevDtos
 {
-  public  class GorevUpdateDto
+    public  class GorevUpdateDto
     {
         public int Id { get; set; }
         public int AciliyetId { get; set; }

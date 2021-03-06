@@ -1,11 +1,6 @@
-﻿using IsTakip.DTO.DTOs.AppUserDtos;
-using IsTakip.DTO.DTOs.GorevDtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using IsTakip.DTO.DTOs.GorevDtos;
 
-namespace IsTakip.Web.Areas.Admin.Models
+namespace IsTakip.DTO.DTOs.AppUserDtos
 {
     public class PersonelGorevlendirListDto
     {
