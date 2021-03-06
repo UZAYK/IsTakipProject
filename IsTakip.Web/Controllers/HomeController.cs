@@ -1,4 +1,5 @@
 ﻿using IsTakip.Business.Interfaces;
+using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.Models;
 using Microsoft.AspNetCore.Identity;
@@ -28,7 +29,7 @@ namespace IsTakip.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> GirisYap(AppUserSignInModel model)
+        public async Task<IActionResult>GirisYap(AppUserSignInDto model)
         {
             TempData["Active"] = "cikis";
 
@@ -62,7 +63,7 @@ namespace IsTakip.Web.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> KayitOlAsync(AppUserAddViewModal model)
+        public async Task<IActionResult> KayitOl(AppUserAddDto model)
         {
             if (ModelState.IsValid)
             {
