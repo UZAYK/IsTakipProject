@@ -1,10 +1,7 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using YSKProje.ToDo.DTO.DTOs.RaporDtos;
+using IsTakip.DTO.DTOs.RaporDtos;
 
-namespace YSKProje.ToDo.Business.ValidationRules.FluentValidation
+namespace IsTakip.Business.ValidationRules.FluentValidation
 {
     public class RaporUpdateValidator : AbstractValidator<RaporUpdateDto>
     {

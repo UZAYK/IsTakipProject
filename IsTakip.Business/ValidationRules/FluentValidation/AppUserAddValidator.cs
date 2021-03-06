@@ -1,10 +1,7 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using YSKProje.ToDo.DTO.DTOs.AppUserDtos;
+using IsTakip.DTO.DTOs.AppUserDtos;
 
-namespace YSKProje.ToDo.Business.ValidationRules.FluentValidation
+namespace IsTakip.Business.ValidationRules.FluentValidation
 {
     public class AppUserAddValidator : AbstractValidator<AppUserAddDto>
     {

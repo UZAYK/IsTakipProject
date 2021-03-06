@@ -1,10 +1,7 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using YSKProje.ToDo.DTO.DTOs.AciliyetDtos;
+using IsTakip.DTO.DTOs.AciliyetDTOs;
 
-namespace YSKProje.ToDo.Business.ValidationRules.FluentValidation
+namespace IsTakip.Business.ValidationRules.FluentValidation
 {
     public class AciliyetUpdateValidator : AbstractValidator<AciliyetUpdateDto>
     {

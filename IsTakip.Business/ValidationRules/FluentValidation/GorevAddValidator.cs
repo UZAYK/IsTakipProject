@@ -1,10 +1,7 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using YSKProje.ToDo.DTO.DTOs.GorevDtos;
+using IsTakip.DTO.DTOs.GorevDtos;
 
-namespace YSKProje.ToDo.Business.ValidationRules.FluentValidation
+namespace IsTakip.Business.ValidationRules.FluentValidation
 {
     public class GorevAddValidator : AbstractValidator<GorevAddDto>
     {

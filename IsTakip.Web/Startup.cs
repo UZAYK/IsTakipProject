@@ -1,8 +1,15 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using IsTakip.Business.Concrete;
 using IsTakip.Business.Interfaces;
+using IsTakip.Business.ValidationRules.FluentValidation;
 using IsTakip.DataAccess.Concrete.EntityFrameworkCore.Context;
 using IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories;
 using IsTakip.DataAccess.Interfaces;
+using IsTakip.DTO.DTOs.AciliyetDTOs;
+using IsTakip.DTO.DTOs.AppUserDtos;
+using IsTakip.DTO.DTOs.GorevDtos;
+using IsTakip.DTO.DTOs.RaporDtos;
 using IsTakip.Entities.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,6 +17,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using YSKProje.ToDo.Business.ValidationRules.FluentValidation;
 
 namespace IsTakip.Web
 {
@@ -51,7 +59,18 @@ namespace IsTakip.Web
                 opt.LoginPath = "/Home/Index";
             });
 
-            services.AddControllersWithViews()
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddTransient<IValidator<AciliyetAddDto>, AciliyetAddValidator>();
+            services.AddTransient<IValidator<AciliyetUpdateDto>, AciliyetUpdateValidator>();
+            services.AddTransient<IValidator<AppUserAddDto>, AppUserAddValidator>();
+            services.AddTransient<IValidator<AppUserSignInDto>, AppUserSignInValidator>();
+            services.AddTransient<IValidator<GorevAddDto>, GorevAddValidator>();
+            services.AddTransient<IValidator<GorevUpdateDto>, GorevUpdateValidator>();
+            services.AddTransient<IValidator<RaporAddDto>, RaporAddValidator>();
+            services.AddTransient<IValidator<RaporUpdateDto>, RaporUpdateValidator>();
+
+            services.AddControllersWithViews().AddFluentValidation()
                   .AddRazorRuntimeCompilation();
         }
 
