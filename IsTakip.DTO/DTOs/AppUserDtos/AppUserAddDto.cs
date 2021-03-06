@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Models
 {
-    public class AppUserAddViewModal
+    public class AppUserAddDto
     {
         public string UserName { get; set; }
 

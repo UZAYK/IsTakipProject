@@ -5,13 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EPPlus" Version="5.5.3" />
+    <PackageReference Include="EPPlus" Version="5.5.5" />
     <PackageReference Include="FastMember" Version="1.5.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.1" />
     <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.7.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IsTakip.DataAccess\IsTakip.DataAccess.csproj" />
+    <ProjectReference Include="..\IsTakip.DTO\IsTakip.DTO.csproj" />
   </ItemGroup>
 
 </Project>
