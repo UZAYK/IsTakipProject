@@ -1,4 +1,6 @@
-﻿using IsTakip.Business.Interfaces;
+﻿using AutoMapper;
+using IsTakip.Business.Interfaces;
+using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Identity;
@@ -11,27 +13,24 @@ namespace IsTakip.Web.ViewsComponents
 
         private readonly UserManager<AppUser> _userManager;
         private readonly IBildirimService _bildirimService;
-        public Wrapper(UserManager<AppUser> userManager, IBildirimService bildirimService)
+        private readonly IMapper _mapper;
+        public Wrapper(UserManager<AppUser> userManager, IBildirimService bildirimService, IMapper mapper)
         {
             _userManager = userManager;
             _bildirimService = bildirimService;
+            _mapper = mapper;
         }
 
         public IViewComponentResult Invoke()
         {
-            var user = _userManager.FindByNameAsync(User.Identity.Name).Result;
-            AppUserListViewModel model = new AppUserListViewModel();
+            var identityUser = _userManager.FindByNameAsync(User.Identity.Name).Result;
+            var model = _mapper.Map<AppUserListDto>(identityUser);
 
-            model.Id = user.Id;
-            model.Name = user.Name;
-            model.Picture = user.Picture;
-            model.SurName = user.SurName;
-            model.Email = user.Email;
 
-            var bildirimler = _bildirimService.GetirOkunmayanlar(user.Id).Count;
+            var bildirimler = _bildirimService.GetirOkunmayanlar(model.Id).Count;
+
             ViewBag.BildirimSayisi = bildirimler;
-
-            var roles = _userManager.GetRolesAsync(user).Result;
+            var roles = _userManager.GetRolesAsync(identityUser).Result;
 
             if (roles.Contains("Admin"))
             {

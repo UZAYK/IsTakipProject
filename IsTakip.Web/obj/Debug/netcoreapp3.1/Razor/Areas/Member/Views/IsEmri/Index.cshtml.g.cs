@@ -19,8 +19,15 @@ using IsTakip.Web.Areas.Admin.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
+using IsTakip.DTO.DTOs.BildirimDtos;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9fa66e7ca67cef138a15ba448b72583b5613d639", @"/Areas/Member/Views/IsEmri/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e94ef3c139b7c04484293e3588428a8ad08dcc42", @"/Areas/Member/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"deeb4aec7de3d55955d84a15740daadde6684d82", @"/Areas/Member/Views/_ViewImports.cshtml")]
     public class Areas_Member_Views_IsEmri_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<GorevListAllViewModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "EkleRapor", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -147,7 +154,7 @@ WriteAttributeValue("", 742, index, 742, 6, false);
                     </span>
 ");
             WriteLiteral("                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa66e7ca67cef138a15ba448b72583b5613d63910161", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa66e7ca67cef138a15ba448b72583b5613d63910373", async() => {
                 WriteLiteral("\r\n                        Rapor Yaz <i class=\"fas fa-pencil-alt\"></i>\r\n                    ");
             }
             );
@@ -188,7 +195,7 @@ WriteAttributeValue("", 742, index, 742, 6, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa66e7ca67cef138a15ba448b72583b5613d63912837", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa66e7ca67cef138a15ba448b72583b5613d63913049", async() => {
                 WriteLiteral("\r\n                    Tamamlandı olarak işaretle\r\n                ");
             }
             );
@@ -228,7 +235,7 @@ WriteAttributeValue("", 1957, index, 1957, 6, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa66e7ca67cef138a15ba448b72583b5613d63915471", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa66e7ca67cef138a15ba448b72583b5613d63915683", async() => {
                 WriteLiteral("\r\n                    Rapor Yaz <i class=\"fas fa-pencil-alt\"></i>\r\n                ");
             }
             );
@@ -296,7 +303,7 @@ WriteAttributeValue("", 1957, index, 1957, 6, false);
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                            <td>\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa66e7ca67cef138a15ba448b72583b5613d63919284", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa66e7ca67cef138a15ba448b72583b5613d63919496", async() => {
                 WriteLiteral("\r\n                                    <i class=\"fas fa-pencil-alt mr-2\"></i> Düzenle\r\n                                ");
             }
             );

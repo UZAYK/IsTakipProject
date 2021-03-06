@@ -19,8 +19,15 @@ using IsTakip.Web.Areas.Admin.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
+using IsTakip.DTO.DTOs.BildirimDtos;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7e783d3e66de4097362f25fb93fd2065dbfeddcf", @"/Areas/Member/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e94ef3c139b7c04484293e3588428a8ad08dcc42", @"/Areas/Member/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"deeb4aec7de3d55955d84a15740daadde6684d82", @"/Areas/Member/Views/_ViewImports.cshtml")]
     public class Areas_Member_Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -90,7 +97,7 @@ using IsTakip.Web.Areas.Admin.Models;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                    <p class=\"text-right \" style=\"font-size:12px;\">\r\n                        İncelemek için ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf6399", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf6611", async() => {
                 WriteLiteral(" Tıklayınız ");
             }
             );
@@ -156,7 +163,7 @@ using IsTakip.Web.Areas.Admin.Models;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                    <p class=\"text-right \" style=\"font-size:12px;\">\r\n                        Tamamlamak için ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf9787", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf9999", async() => {
                 WriteLiteral(" Tıklayınız ");
             }
             );
@@ -222,7 +229,7 @@ using IsTakip.Web.Areas.Admin.Models;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                    <p class=\" text-right\" style=\"font-size:12px;\">\r\n                        İncelemek için ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf13134", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf13346", async() => {
                 WriteLiteral(" Tıklayınız ");
             }
             );
@@ -290,7 +297,7 @@ using IsTakip.Web.Areas.Admin.Models;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                    <p class=\"text-right \" style=\"font-size:12px;\">\r\n                        Okumak için ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf16499", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf16711", async() => {
                 WriteLiteral(" Tıklayınız ");
             }
             );

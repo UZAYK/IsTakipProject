@@ -1,4 +1,6 @@
-﻿using IsTakip.Business.Interfaces;
+﻿using AutoMapper;
+using IsTakip.Business.Interfaces;
+using IsTakip.DTO.DTOs.BildirimDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -17,11 +19,13 @@ namespace IsTakip.Web.Areas.Member.Controllers
     {
         #region CTOR - DEPENDENCY INJECTION
         private readonly IBildirimService _bildirimService;
+        private readonly IMapper _mapper;
         private readonly UserManager<AppUser> _userManager;
-        public BildirimController(IBildirimService bildirimService, UserManager<AppUser> userManager)
+        public BildirimController(IBildirimService bildirimService, UserManager<AppUser> userManager, IMapper mapper)
         {
             _bildirimService = bildirimService;
             _userManager = userManager;
+            _mapper = mapper;
         }
         #endregion
 
@@ -31,16 +35,9 @@ namespace IsTakip.Web.Areas.Member.Controllers
             TempData["Active"] = "bildirim";
 
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            var bildirimler = _bildirimService.GetirOkunmayanlar(user.Id);
-            List<BildirimListViewModel> models = new List<BildirimListViewModel>();
-            foreach (var item in bildirimler)
-            {
-                BildirimListViewModel model = new BildirimListViewModel();
-                model.Id = item.Id;
-                model.Aciklama = item.Aciklama;
-                models.Add(model);
-            }
-            return View(models);
+            _mapper.Map<List<BildirimListDto>>(_bildirimService.GetirOkunmayanlar(user.Id));
+            
+            return View(_mapper.Map<List<BildirimListDto>>(_bildirimService.GetirOkunmayanlar(user.Id)));
         }
         [HttpPost]
         public IActionResult Index(int id)
@@ -49,7 +46,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
             guncellenecekBildirim.Durum = true;
             _bildirimService.Guncelle(guncellenecekBildirim);
             return RedirectToAction("Index");
-        } 
+        }
         #endregion
     }
 }

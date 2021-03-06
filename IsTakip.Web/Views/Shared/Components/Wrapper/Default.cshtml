@@ -1,4 +1,4 @@
-﻿@model AppUserListViewModel
+﻿@model AppUserListDto
 
 @{
     string active = string.Empty;
@@ -21,7 +21,7 @@
     <div class="list-group list-group-flush">
 
         <a asp-action="Index" asp-controller="Home"
-           class="list-group-item list-group-item-action @(active=="anasayfa"?"anasayfa":"")">
+           class="list-group-item list-group-item-action @(active=="anasayfa"?"active":"")">
             <i class="fas fa-home mr-2"></i>
             Ana Sayfa
         </a>

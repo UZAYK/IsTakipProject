@@ -1,5 +1,7 @@
-﻿using IsTakip.Business.Concrete;
+﻿using AutoMapper;
+using IsTakip.Business.Concrete;
 using IsTakip.Business.Interfaces;
+using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -19,10 +21,12 @@ namespace IsTakip.Web.Areas.Member.Controllers
         #region CTOR - DEPENDENCY INJECTION
         private readonly UserManager<AppUser> _userManager;
         private readonly IGorevService _gorevService;
-        public GorevController(UserManager<AppUser> userManager, IGorevService gorevService)
+        private readonly IMapper _mapper;
+        public GorevController(UserManager<AppUser> userManager, IGorevService gorevService, IMapper mapper)
         {
             _userManager = userManager;
             _gorevService = gorevService;
+            _mapper = mapper;
         }
         #endregion
 
@@ -32,26 +36,16 @@ namespace IsTakip.Web.Areas.Member.Controllers
             TempData["Active"] = "gorev";
 
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
+
             int toplamSayfa;
-            var gorevler = _gorevService.GetirTumTablolarlaTamamlanmayan(out toplamSayfa, user.Id, aktifSayfa);
+
+            var gorevler = _mapper.Map<List<GorevListAllDto>>(_gorevService.GetirTumTablolarlaTamamlanmayan(out toplamSayfa, user.Id, aktifSayfa));
 
             ViewBag.ToplamSayfa = toplamSayfa;
             ViewBag.AktifSayfa = aktifSayfa;
 
-            List<GorevListAllViewModel> models = new List<GorevListAllViewModel>();
-            foreach (var gorev in gorevler)
-            {
-                GorevListAllViewModel model = new GorevListAllViewModel();
-                model.Id = gorev.Id;
-                model.Ad = gorev.Ad;
-                model.AppUser = gorev.AppUser;
-                model.OlusturulmaTarihi = gorev.OlusturulmaTarihi;
-                model.Raporlar = gorev.Raporlar;
-                model.Aciklama = gorev.Aciklama;
-                model.Aciliyet = gorev.Aciliyet;
-                models.Add(model);
-            }
-            return View(models);
+            
+            return View(gorevler);
         }
         #endregion
     }
