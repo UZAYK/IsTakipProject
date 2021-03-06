@@ -2,10 +2,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
@@ -26,7 +22,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         }
         public IActionResult EnCokTamamlayan()
         {
-          var jsonString = JsonConvert.SerializeObject(_appUserService.GetirEnCokGorevdeCalisanPersoneller());
+          var jsonString = JsonConvert.SerializeObject(_appUserService.GetirEnCokGorevTamamlamisPersoneller());
             return Json(jsonString);
         }
         public IActionResult EnCokCalisan()
