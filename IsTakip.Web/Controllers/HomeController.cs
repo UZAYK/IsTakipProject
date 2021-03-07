@@ -37,7 +37,7 @@ namespace IsTakip.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                var user = await GetirGirisYapanKullanici();
+                var user = await _userManager.FindByNameAsync(model.UserName);
                 if (user != null)
                 {
                     var identityResult = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, false);
