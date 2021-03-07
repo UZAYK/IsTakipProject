@@ -3,6 +3,7 @@ using IsTakip.Business.Concrete;
 using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.Entities.Concrete;
+using IsTakip.Web.BaseControllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,15 +16,13 @@ namespace IsTakip.Web.Areas.Member.Controllers
 {
     [Authorize(Roles = "Member")]
     [Area("Member")]
-    public class GorevController : Controller
+    public class GorevController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION
-        private readonly UserManager<AppUser> _userManager;
         private readonly IGorevService _gorevService;
         private readonly IMapper _mapper;
-        public GorevController(UserManager<AppUser> userManager, IGorevService gorevService, IMapper mapper)
+        public GorevController(UserManager<AppUser> userManager, IGorevService gorevService, IMapper mapper) : base(userManager)
         {
-            _userManager = userManager;
             _gorevService = gorevService;
             _mapper = mapper;
         }
@@ -34,7 +33,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         {
             TempData["Active"] = "gorev";
 
-            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            var user = await GetirGirisYapanKullanici();
 
 
             var gorevler = _mapper.Map<List<GorevListAllDto>>(_gorevService.GetirTumTablolarlaTamamlanmayan(out int toplamSayfa, user.Id, aktifSayfa));
@@ -42,7 +41,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
             ViewBag.ToplamSayfa = toplamSayfa;
             ViewBag.AktifSayfa = aktifSayfa;
 
-            
+
             return View(gorevler);
         }
         #endregion

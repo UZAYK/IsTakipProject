@@ -3,6 +3,7 @@ using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.DTO.DTOs.RaporDtos;
 using IsTakip.Entities.Concrete;
+using IsTakip.Web.BaseControllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,25 +14,23 @@ namespace IsTakip.Web.Areas.Member.Controllers
 {
     [Authorize(Roles = "Member")]
     [Area("Member")]
-    public class IsEmriController : Controller
+    public class IsEmriController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION
         private readonly IGorevService _gorevService;
         private readonly IRaporService _raporService;
         private readonly IBildirimService _bildirimService;
         private readonly IMapper _mapper;
-        private readonly UserManager<AppUser> _userManager;
 
         public object RaporUpdateViewModel { get; private set; }
 
         public IsEmriController(IGorevService gorevService, UserManager<AppUser> userManager,
-                                IRaporService raporService, IBildirimService bildirimService, IMapper mapper)
+                                IRaporService raporService, IBildirimService bildirimService, IMapper mapper):base(userManager)
         {
             _gorevService = gorevService;
             _raporService = raporService;
             _bildirimService = bildirimService;
             _mapper = mapper;
-            _userManager = userManager;
         }
         #endregion
 
@@ -70,7 +69,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
                     Tanim = model.Tanim,
                 });
                 var adminUserList = await _userManager.GetUsersInRoleAsync("Admin");
-                var aktifKulanici = await _userManager.FindByNameAsync(User.Identity.Name);
+                var aktifKulanici = await GetirGirisYapanKullanici();
 
                 foreach (var admin in adminUserList)
                 {
@@ -133,7 +132,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
             _gorevService.Guncelle(guncellenecekGorev);
 
             var adminUserList = await _userManager.GetUsersInRoleAsync("Admin");
-            var aktifKulanici = await _userManager.FindByNameAsync(User.Identity.Name);
+            var aktifKulanici = await GetirGirisYapanKullanici();
 
             foreach (var admin in adminUserList)
             {

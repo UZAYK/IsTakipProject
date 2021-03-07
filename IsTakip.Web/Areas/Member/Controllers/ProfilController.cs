@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.Entities.Concrete;
+using IsTakip.Web.BaseControllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -15,14 +16,12 @@ namespace IsTakip.Web.Areas.Member.Controllers
 {
     [Area("Member")]
     [Authorize(Roles = "Member")]
-    public class ProfilController : Controller
+    public class ProfilController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION
-        private readonly UserManager<AppUser> _userManager;
         private readonly IMapper _mapper;
-        public ProfilController(UserManager<AppUser> userManager, IMapper mapper)
+        public ProfilController(UserManager<AppUser> userManager, IMapper mapper):base(userManager)
         {
-            _userManager = userManager;
             _mapper = mapper;
         }
         #endregion
@@ -31,7 +30,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         public async Task<IActionResult> Index()
         {
             TempData["Active"] = "profil";
-            var appUser = await _userManager.FindByNameAsync(User.Identity.Name);
+            var appUser = await GetirGirisYapanKullanici();
             return View(_mapper.Map<List<AppUserListDto>>(appUser));
         }
       
