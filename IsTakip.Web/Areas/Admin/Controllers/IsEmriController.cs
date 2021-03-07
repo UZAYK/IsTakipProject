@@ -2,6 +2,7 @@
 using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.DTO.DTOs.GorevDtos;
+using IsTakip.DTO.DTOs.RaporDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.BaseControllers;
 using IsTakip.Web.StringInfo;
@@ -26,7 +27,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         private readonly IBildirimService _bildirimService;
 
         public IsEmriController(IAppUserService appUserService, IGorevService gorevService, IBildirimService bildirimService,
-                                UserManager<AppUser> userManager, IDosyaService dosyaService, IMapper mapper) :base(userManager)
+                                UserManager<AppUser> userManager, IDosyaService dosyaService, IMapper mapper) : base(userManager)
         {
             _appUserService = appUserService;
             _gorevService = gorevService;
@@ -105,7 +106,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Excel İşlemleri
         public IActionResult GetirExcel(int id)
         {
-            return File(_dosyaService.AktarExcel(_gorevService.GetirRaporlarileId(id).Raporlar),
+            return File(_dosyaService.AktarExcel(_mapper.Map<List<RaporDosyaDto>>(_gorevService.GetirRaporlarileId(id).Raporlar)),
                 "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Guid.NewGuid() + ".xlsx");
 
         }
@@ -114,7 +115,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region PDF İşlemleri
         public IActionResult GetirPdf(int id)
         {
-            var path = _dosyaService.AktarPdf(_gorevService.GetirRaporlarileId(id).Raporlar);
+            var path = _dosyaService.AktarPdf(_mapper.Map<List<RaporDosyaDto>>(_gorevService.GetirRaporlarileId(id).Raporlar));
             return File(path, "application/pdf", Guid.NewGuid() + ".pdf");
         }
 

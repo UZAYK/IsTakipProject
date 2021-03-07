@@ -59,6 +59,9 @@ namespace IsTakip.Web.Mapping.AutoMapperProfile
 
             CreateMap<RaporUpdateDto, Rapor>();
             CreateMap<Rapor, RaporUpdateDto>();
+            
+            CreateMap<RaporDosyaDto, Rapor>();
+            CreateMap<Rapor, RaporDosyaDto>();
             #endregion
         }
     }

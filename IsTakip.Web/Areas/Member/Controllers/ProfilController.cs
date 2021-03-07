@@ -32,7 +32,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         {
             TempData["Active"] = TempdataInfo.Profil;
             var appUser = await GetirGirisYapanKullanici();
-            return View(_mapper.Map<List<AppUserListDto>>(appUser));
+            return View(_mapper.Map<AppUserListDto>(appUser));
         }
       
         [HttpPost]

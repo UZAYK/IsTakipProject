@@ -1,11 +1,9 @@
 ﻿using IsTakip.Entities.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace IsTakip.DataAccess.Interfaces
 {
-    public interface IAppUserDal : IGenericDal<AppUser>
+    public interface IAppUserDal
     {
         List<AppUser> GetirAdminOlmayanlar();
 
