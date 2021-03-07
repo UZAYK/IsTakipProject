@@ -5,15 +5,12 @@ using IsTakip.Web.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Authorize(Roles = RoleInfo.Admin)]
     [Area(AreaInfo.Admin)]
+    [Authorize(Roles = RoleInfo.Admin)]
     public class HomeController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION

@@ -6,8 +6,8 @@ using Newtonsoft.Json;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Authorize(Roles = RoleInfo.Admin)]
     [Area(AreaInfo.Admin)]
+    [Authorize(Roles = RoleInfo.Admin)]
     public class GrafikController : Controller
     {
         #region CTOR

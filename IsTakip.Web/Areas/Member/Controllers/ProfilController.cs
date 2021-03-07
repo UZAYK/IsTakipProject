@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Member.Controllers
 {
-    [Area(RoleInfo.Member)]
+    [Area(AreaInfo.Member)]
     [Authorize(Roles = RoleInfo.Member)]
     public class ProfilController : BaseIdentityController
     {

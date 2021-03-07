@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Authorize(Roles = RoleInfo.Admin)]
     [Area(AreaInfo.Admin)]
+    [Authorize(Roles = RoleInfo.Admin)]
     public class BildirimController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION

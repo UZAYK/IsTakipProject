@@ -14,8 +14,8 @@ using System.Linq;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Authorize(Roles = RoleInfo.Admin)]
     [Area(AreaInfo.Admin)]
+    [Authorize(Roles = RoleInfo.Admin)]
     public class IsEmriController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION
