@@ -61,7 +61,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Aciliyet Güncelle
         public IActionResult GuncelleAciliyet(int id)
         {
-            TempData["Active"] = "aciliyet";
+            TempData["Active"] = TempdataInfo.Aciliyet;
            
             return View(_mapper.Map<AciliyetUpdateDto>(_aciliyetService.GetirIdile(id)));
         }

@@ -32,7 +32,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         #region Index
         public async Task<IActionResult> Index()
         {
-            TempData["Active"] = "anasayfa";
+            TempData["Active"] = TempdataInfo.Anasayfa;
 
             var user = await GetirGirisYapanKullanici();
 

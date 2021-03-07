@@ -32,7 +32,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Index / Ana Sayfa
         public async Task<IActionResult> Index()
         {
-            TempData["Active"] = "profil";
+            TempData["Active"] = TempdataInfo.Profil;
 
             return View(_mapper.Map<AppUserListDto>(await GetirGirisYapanKullanici())); 
         } 

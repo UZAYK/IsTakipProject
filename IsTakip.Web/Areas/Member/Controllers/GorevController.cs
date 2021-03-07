@@ -32,7 +32,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         #region Index/Ana Sayfa
         public async Task<IActionResult> Index(int aktifSayfa = 1)
         {
-            TempData["Active"] = "gorev";
+            TempData["Active"] = TempdataInfo.Gorev;
 
             var user = await GetirGirisYapanKullanici();
 

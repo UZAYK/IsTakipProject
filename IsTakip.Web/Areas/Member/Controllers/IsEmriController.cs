@@ -38,7 +38,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         #region Index/Ana Sayfa
         public async Task<IActionResult> Index()
         {
-            TempData["Active"] = "isemri";
+            TempData["Active"] = TempdataInfo.IsEmri;
             var user = await GetirGirisYapanKullanici();
             
             return View(_mapper.Map<List<GorevListAllDto>>(_gorevService.GetirTumTablolarla(I => I.AppUserId == user.Id && !I.Durum)));
@@ -91,7 +91,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         #region Rapor Güncelleme
         public IActionResult GuncelleRapor(int id)
         {
-            TempData["Active"] = "isemri";
+            TempData["Active"] = TempdataInfo.IsEmri;
 
             var rapor = _raporService.GetirGorevileId(id);
             RaporUpdateDto model = new RaporUpdateDto

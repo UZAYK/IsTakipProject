@@ -39,7 +39,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Index / Ana Sayfa
         public IActionResult Index()
         {
-            TempData["Active"] = "isemri";
+            TempData["Active"] = TempdataInfo.IsEmri;
 
             return View(_mapper.Map<List<GorevListAllDto>>(_gorevService.GetirTumTablolarla()));
         }
@@ -48,7 +48,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Personel Ata
         public IActionResult AtaPersonel(int id, string s, int sayfa = 1)
         {
-            TempData["Active"] = "isemri";
+            TempData["Active"] = TempdataInfo.IsEmri;
 
             ViewBag.AktifSayfa = sayfa;
 
@@ -82,7 +82,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Personel Görevlendir
         public IActionResult GorevlendirPersonel(PersonelGorevDto model)
         {
-            TempData["Active"] = "Isemri";
+            TempData["Active"] = TempdataInfo.IsEmri;
 
             PersonelGorevlendirListDto personelGorevlendirModel = new PersonelGorevlendirListDto
             {
@@ -96,7 +96,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Detaylandır
         public IActionResult Detaylandir(int id)
         {
-            TempData["Active"] = "isemri";
+            TempData["Active"] = TempdataInfo.IsEmri;
 
             return View(_mapper.Map<GorevListAllDto>(_gorevService.GetirRaporlarileId(id)));
         }

@@ -33,7 +33,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Index / Ana Sayfa
         public IActionResult Index()
         {
-            TempData["Active"] = "gorev";
+            TempData["Active"] = TempdataInfo.Gorev;
 
             return View(_mapper.Map<List<GorevListDto>>(_gorevService.GetirIdAciliyetTamamlanmayan()));
         }
@@ -42,7 +42,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Görev Ekle
         public IActionResult EkleGorev()
         {
-            TempData["Active"] = "gorev";
+            TempData["Active"] = TempdataInfo.Gorev;
             ViewBag.Aciliyetler = new SelectList(_aciliyetService.GetirHepsi(), "Id", "Tanim");
             return View(new GorevAddDto());
         }
@@ -68,7 +68,8 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #region Görev Güncelle
         public IActionResult GuncelleGorev(int id)
         {
-            TempData["Active"] = "gorev";
+            TempData["Active"] = TempdataInfo.Gorev;
+
             var gorev = _gorevService.GetirIdile(id);
             ViewBag.Aciliyetler = new SelectList(_aciliyetService.GetirHepsi(),
                 "Id", "Tanim", gorev.AciliyetId);

@@ -17,7 +17,7 @@ namespace IsTakip.Web.StringInfo
         public const string Member = "Member";
     }
 
-    public class TempdataIfo
+    public class TempdataInfo
     {
         public const string Aciliyet = "aciliyet";
         public const string Bildirim = "bildirim";

@@ -31,7 +31,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
         #region Index / Ana Sayfa
         public async Task<IActionResult> Index()
         {
-            TempData["Active"] = "bildirim";
+            TempData["Active"] = TempdataInfo.Bildirim;
 
             var user = await GetirGirisYapanKullanici();
 
