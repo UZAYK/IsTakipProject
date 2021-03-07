@@ -1,5 +1,6 @@
 ﻿using IsTakip.Business.Interfaces;
 using IsTakip.Entities.Concrete;
+using IsTakip.Web.BaseControllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,17 +13,15 @@ namespace IsTakip.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
-    public class HomeController : Controller
+    public class HomeController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION
         private readonly IGorevService _gorevService;
         private readonly IBildirimService _bildirimService;
         private readonly IRaporService _raporService;
-        private readonly UserManager<AppUser> _userManager;
         public HomeController(IRaporService raporService, UserManager<AppUser> userManager,
-                              IBildirimService bildirimService, IGorevService gorevService)
+                              IBildirimService bildirimService, IGorevService gorevService) :base(userManager)
         {
-            _userManager = userManager;
             _bildirimService = bildirimService;
             _raporService = raporService;
             _gorevService = gorevService;
@@ -34,7 +33,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         {
             TempData["Active"] = "anasayfa";
 
-            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            var user = await GetirGirisYapanKullanici();
 
             ViewBag.AtanmayiBekleyenGorevSayisi = _gorevService.GetirAtanmayiBekleyenGorevSayisi();
             ViewBag.TamamlanmisGorevSayisi = _gorevService.GetirTamamlanmisGorevSayisi();

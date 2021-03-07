@@ -14,27 +14,13 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 2 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Views\_ViewImports.cshtml"
-using IsTakip.Web.Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Views\_ViewImports.cshtml"
-using IsTakip.Web.Areas.Admin.Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Views\_ViewImports.cshtml"
 using IsTakip.DTO.DTOs.AppUserDtos;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"378faacbe512fb44b3f663689a31a854a487d70c", @"/Views/Shared/Components/Wrapper/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e55388ad142a244f2f1a9a323e3177c9e5433c2e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a8f8b07fbb24f5f1f9868b3f81c2390982ba0530", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Wrapper_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<AppUserListDto>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("style", new global::Microsoft.AspNetCore.Html.HtmlString("height:10rem!important;"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -91,7 +77,7 @@ using IsTakip.DTO.DTOs.AppUserDtos;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n\r\n<div class=\"border border-right \" id=\"sidebar-wrapper\">\r\n    <div class=\"sidebar-heading\">\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "378faacbe512fb44b3f663689a31a854a487d70c8232", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "378faacbe512fb44b3f663689a31a854a487d70c7844", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -125,7 +111,7 @@ AddHtmlAttributeValue("", 368, Model.Name, 368, 11, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n    </div>\r\n\r\n    <div class=\"list-group list-group-flush\">\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c10458", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c10070", async() => {
                 WriteLiteral("\r\n            <i class=\"fas fa-home mr-2\"></i>\r\n            Ana Sayfa\r\n        ");
             }
             );
@@ -154,7 +140,7 @@ AddHtmlAttributeValue(" ", 620, active=="anasayfa"?"active":"", 621, 33, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c12580", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c12192", async() => {
                 WriteLiteral("<i class=\"fas fa-tasks mr-2\"></i> Görev İşlemleri");
             }
             );
@@ -183,7 +169,7 @@ AddHtmlAttributeValue(" ", 841, active=="gorev"?"active":"", 842, 30, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c14659", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c14271", async() => {
                 WriteLiteral("\r\n            <i class=\"fas fa-exclamation mr-2\"></i>\r\n            Aciliyet İşlemleri\r\n        ");
             }
             );
@@ -212,7 +198,7 @@ AddHtmlAttributeValue("  ", 1030, active=="aciliyet"?"active":"", 1032, 33, fals
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c16802", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c16414", async() => {
                 WriteLiteral("\r\n            <i class=\"far fa-file mr-2 ml-0\"></i>\r\n            İş Emirleri\r\n        ");
             }
             );
@@ -241,7 +227,7 @@ AddHtmlAttributeValue("  ", 1269, active=="isemri"?"active":"", 1271, 31, false)
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c18936", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c18548", async() => {
                 WriteLiteral("\r\n            <i class=\"fas fa-chart-pie mr-2\"></i>\r\n            Grafikler\r\n        ");
             }
             );
@@ -270,7 +256,7 @@ AddHtmlAttributeValue(" ", 1497, active=="grafik"?"active":"", 1498, 31, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c21067", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c20679", async() => {
                 WriteLiteral("\r\n            <i class=\"far fa-bell mr-2\"></i>\r\n");
 #nullable restore
 #line 47 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Views\Shared\Components\Wrapper\Default.cshtml"
@@ -325,7 +311,7 @@ AddHtmlAttributeValue(" ", 1724, active=="bildirim"?"active":"", 1725, 33, false
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c24268", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c23880", async() => {
                 WriteLiteral("\r\n            <i class=\"fas fa-user mr-2\"></i>\r\n            Profilim\r\n        ");
             }
             );
@@ -354,7 +340,7 @@ AddHtmlAttributeValue(" ", 2259, active=="profil"?"active":"", 2260, 31, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c26393", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "378faacbe512fb44b3f663689a31a854a487d70c26005", async() => {
                 WriteLiteral("\r\n            <i class=\"fas fa-sign-out-alt mr-2\"></i>\r\n            Çıkış Yap\r\n        ");
             }
             );

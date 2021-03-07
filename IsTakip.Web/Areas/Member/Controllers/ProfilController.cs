@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.Entities.Concrete;
-using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;

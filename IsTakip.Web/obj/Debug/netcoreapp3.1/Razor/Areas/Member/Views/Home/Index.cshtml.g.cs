@@ -14,34 +14,34 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 2 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
-using IsTakip.Web.Areas.Admin.Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
 using IsTakip.DTO.DTOs.BildirimDtos;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
+#line 3 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
 using IsTakip.DTO.DTOs.GorevDtos;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
+#line 4 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
 using IsTakip.DTO.DTOs.RaporDtos;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Member\Views\_ViewImports.cshtml"
+using IsTakip.DTO.DTOs.AppUserDtos;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7e783d3e66de4097362f25fb93fd2065dbfeddcf", @"/Areas/Member/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b0c0eab4f007a2af56c692ed30b9b07276fd2b18", @"/Areas/Member/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3ed98849ce402009a45ce9e888f2b46381979d0f", @"/Areas/Member/Views/_ViewImports.cshtml")]
     public class Areas_Member_Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -111,7 +111,7 @@ using IsTakip.DTO.DTOs.RaporDtos;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                    <p class=\"text-right \" style=\"font-size:12px;\">\r\n                        İncelemek için ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf7029", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf7027", async() => {
                 WriteLiteral(" Tıklayınız ");
             }
             );
@@ -177,7 +177,7 @@ using IsTakip.DTO.DTOs.RaporDtos;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                    <p class=\"text-right \" style=\"font-size:12px;\">\r\n                        Tamamlamak için ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf10417", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf10415", async() => {
                 WriteLiteral(" Tıklayınız ");
             }
             );
@@ -243,7 +243,7 @@ using IsTakip.DTO.DTOs.RaporDtos;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                    <p class=\" text-right\" style=\"font-size:12px;\">\r\n                        İncelemek için ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf13765", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf13763", async() => {
                 WriteLiteral(" Tıklayınız ");
             }
             );
@@ -311,7 +311,7 @@ using IsTakip.DTO.DTOs.RaporDtos;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                    <p class=\"text-right \" style=\"font-size:12px;\">\r\n                        Okumak için ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf17130", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e783d3e66de4097362f25fb93fd2065dbfeddcf17128", async() => {
                 WriteLiteral(" Tıklayınız ");
             }
             );

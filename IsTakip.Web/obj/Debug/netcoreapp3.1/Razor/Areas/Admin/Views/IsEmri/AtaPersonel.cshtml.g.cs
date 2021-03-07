@@ -14,41 +14,34 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 3 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\_ViewImports.cshtml"
-using IsTakip.Web.Areas.Admin.Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\_ViewImports.cshtml"
 using IsTakip.DTO.DTOs.AciliyetDTOs;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\_ViewImports.cshtml"
+#line 4 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\_ViewImports.cshtml"
 using IsTakip.DTO.DTOs.BildirimDtos;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\_ViewImports.cshtml"
+#line 5 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\_ViewImports.cshtml"
 using IsTakip.DTO.DTOs.GorevDtos;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\_ViewImports.cshtml"
+#line 6 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\_ViewImports.cshtml"
 using IsTakip.DTO.DTOs.AppUserDtos;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b63da77f921b80f1a65dfedcb45a4a15f4d337a1", @"/Areas/Admin/Views/IsEmri/AtaPersonel.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d21144269943a88a72f81a3e6659f22e2fa529e6", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"75670ff94bf00d4c81f35f1867cc1965419d9f14", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_IsEmri_AtaPersonel : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<GorevListDto>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-inline my-2 my-lg-0 mr-0 p-1 m-1 text-right float-right "), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -96,7 +89,7 @@ using IsTakip.DTO.DTOs.AppUserDtos;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div class=\"row mt-2\">\r\n\r\n    <div class=\"col-md-12\">\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a17074", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a16862", async() => {
                 WriteLiteral("\r\n            <input class=\"form-control mr-sm-2\" type=\"search\" name=\"s\" placeholder=\"Ara\" aria-label=\"Search\">\r\n            <button class=\"btn btn-outline-primary my-2 my-sm-0\" type=\"submit\"> Personel Ara</button>\r\n        ");
             }
             );
@@ -207,7 +200,7 @@ WriteAttributeValue("", 1675, item.Name, 1675, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("</h5>\r\n\r\n                            <p class=\"card-text\"> \r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("getirGorevAppUserId", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a113069", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("getirGorevAppUserId", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a112857", async() => {
                 WriteLiteral(" ");
             }
             );
@@ -237,7 +230,7 @@ __IsTakip_Web_TagHalpers_GorevAppUserIdTagHelper.AppUserId = item.Id;
 #line hidden
 #nullable disable
             WriteLiteral("</small>\r\n\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a114971", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a114759", async() => {
                 WriteLiteral("\r\n                                <i class=\"fas fa-address-card mr-2\"></i> Görevlendir");
             }
             );
@@ -317,7 +310,7 @@ WriteAttributeValue(" ", 2961, ViewBag.AktifSayfa==i?"active":"", 2962, 36, fals
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a119761", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a119549", async() => {
 #nullable restore
 #line 84 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\IsEmri\AtaPersonel.cshtml"
                                            Write(i);
@@ -416,7 +409,7 @@ WriteAttributeValue(" ", 3465, ViewBag.AktifSayfa==i?"active":"", 3466, 36, fals
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a125029", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a124817", async() => {
 #nullable restore
 #line 96 "C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\Areas\Admin\Views\IsEmri\AtaPersonel.cshtml"
                                                Write(i);
@@ -499,7 +492,7 @@ WriteAttributeValue(" ", 3465, ViewBag.AktifSayfa==i?"active":"", 3466, 36, fals
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                </strong> kelimesi için uygun sonuçlar listelendi.\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a129468", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b63da77f921b80f1a65dfedcb45a4a15f4d337a129256", async() => {
                 WriteLiteral("Filtreyi kaldır");
             }
             );

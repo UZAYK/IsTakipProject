@@ -3,7 +3,7 @@ using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.Entities.Concrete;
-using IsTakip.Web.Areas.Admin.Models;
+using IsTakip.Web.BaseControllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,22 +15,20 @@ namespace IsTakip.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
-    public class IsEmriController : Controller
+    public class IsEmriController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION
         private readonly IAppUserService _appUserService;
         private readonly IGorevService _gorevService;
         private readonly IMapper _mapper;
         private readonly IDosyaService _dosyaService;
-        private readonly UserManager<AppUser> _userManager;
         private readonly IBildirimService _bildirimService;
 
         public IsEmriController(IAppUserService appUserService, IGorevService gorevService, IBildirimService bildirimService,
-                                UserManager<AppUser> userManager, IDosyaService dosyaService, IMapper mapper)
+                                UserManager<AppUser> userManager, IDosyaService dosyaService, IMapper mapper) :base(userManager)
         {
             _appUserService = appUserService;
             _gorevService = gorevService;
-            _userManager = userManager;
             _dosyaService = dosyaService;
             _bildirimService = bildirimService;
             _mapper = mapper;
@@ -64,7 +62,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult AtaPersonel(PersonelGorevlendirViewModel model)
+        public IActionResult AtaPersonel(PersonelGorevDto model)
         {
             var guncellenecekGorev = _gorevService.GetirIdile(model.GorevId);
             guncellenecekGorev.AppUserId = model.PersonelId;
@@ -81,7 +79,7 @@ namespace IsTakip.Web.Areas.Admin.Controllers
         #endregion
 
         #region Personel Görevlendir
-        public IActionResult GorevlendirPersonel(PersonelGorevlendirViewModel model)
+        public IActionResult GorevlendirPersonel(PersonelGorevDto model)
         {
             TempData["Active"] = "Isemri";
 

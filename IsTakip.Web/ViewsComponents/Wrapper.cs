@@ -2,7 +2,6 @@
 using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.Entities.Concrete;
-using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

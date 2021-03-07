@@ -3,7 +3,6 @@ using IsTakip.Business.Concrete;
 using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.Entities.Concrete;
-using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -37,9 +36,8 @@ namespace IsTakip.Web.Areas.Member.Controllers
 
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
 
-            int toplamSayfa;
 
-            var gorevler = _mapper.Map<List<GorevListAllDto>>(_gorevService.GetirTumTablolarlaTamamlanmayan(out toplamSayfa, user.Id, aktifSayfa));
+            var gorevler = _mapper.Map<List<GorevListAllDto>>(_gorevService.GetirTumTablolarlaTamamlanmayan(out int toplamSayfa, user.Id, aktifSayfa));
 
             ViewBag.ToplamSayfa = toplamSayfa;
             ViewBag.AktifSayfa = aktifSayfa;

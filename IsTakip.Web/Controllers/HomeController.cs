@@ -1,7 +1,6 @@
 ﻿using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.Entities.Concrete;
-using IsTakip.Web.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,13 +12,11 @@ namespace IsTakip.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IGorevService _gorevService;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        public HomeController(IGorevService gorevService, UserManager<AppUser> userManager,
+        public HomeController( UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager)
         {
-            _gorevService = gorevService;
             _userManager = userManager;
             _signInManager = signInManager;
         }

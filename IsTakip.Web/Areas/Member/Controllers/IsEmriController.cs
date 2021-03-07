@@ -3,7 +3,6 @@ using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.DTO.DTOs.RaporDtos;
 using IsTakip.Entities.Concrete;
-using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -51,9 +50,11 @@ namespace IsTakip.Web.Areas.Member.Controllers
         public IActionResult EkleRapor(int id)
         {
             var gorev = _gorevService.GetirAciliyetileId(id);
-            RaporAddDto model = new RaporAddDto();
-            model.GorevId = id;
-            model.Gorev = gorev;
+            RaporAddDto model = new RaporAddDto
+            {
+                GorevId = id,
+                Gorev = gorev
+            };
             return View(model);
         }
 
@@ -93,17 +94,19 @@ namespace IsTakip.Web.Areas.Member.Controllers
             TempData["Active"] = "isemri";
 
             var rapor = _raporService.GetirGorevileId(id);
-            RaporUpdateDto model = new RaporUpdateDto();
-            model.Id = rapor.Id;
-            model.Tanim = rapor.Tanim;
-            model.Detay = rapor.Detay;
-            model.Gorev = rapor.Gorev;
-            model.GorevId = rapor.GorevId;
+            RaporUpdateDto model = new RaporUpdateDto
+            {
+                Id = rapor.Id,
+                Tanim = rapor.Tanim,
+                Detay = rapor.Detay,
+                Gorev = rapor.Gorev,
+                GorevId = rapor.GorevId
+            };
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult GuncelleRapor(RaporUpdateViewModel model)
+        public IActionResult GuncelleRapor(RaporUpdateDto model)
         {
             if (ModelState.IsValid)
             {
