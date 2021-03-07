@@ -1,6 +1,7 @@
 ﻿using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.Entities.Concrete;
+using IsTakip.Web.BaseControllers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,29 +11,33 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseIdentityController
     {
-        private readonly UserManager<AppUser> _userManager;
+        #region CTOR
         private readonly SignInManager<AppUser> _signInManager;
-        public HomeController( UserManager<AppUser> userManager,
-            SignInManager<AppUser> signInManager)
+        public HomeController(UserManager<AppUser> userManager,
+            SignInManager<AppUser> signInManager) : base(userManager)
         {
-            _userManager = userManager;
             _signInManager = signInManager;
         }
+        #endregion
+
+        #region Index
         public IActionResult Index()
         {
             return View();
-        }
+        } 
+        #endregion
 
+        #region Giriş Yap
         [HttpPost]
-        public async Task<IActionResult>GirisYap(AppUserSignInDto model)
+        public async Task<IActionResult> GirisYap(AppUserSignInDto model)
         {
             TempData["Active"] = "cikis";
 
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByNameAsync(model.UserName);
+                var user = await GetirGirisYapanKullanici();
                 if (user != null)
                 {
                     var identityResult = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, false);
@@ -46,15 +51,16 @@ namespace IsTakip.Web.Controllers
                         else
                         {
                             return RedirectToAction("Index", "Home", new { area = "Member" });
-
                         }
-
                     }
                 }
                 ModelState.AddModelError("", "Kullanıcı adı veya şifre hatalı.");
             }
             return View("Index", model);
         }
+        #endregion
+
+        #region Kayıt Ol
         public IActionResult KayitOl()
         {
             return View();
@@ -80,23 +86,20 @@ namespace IsTakip.Web.Controllers
                     {
                         return RedirectToAction("Index");
                     }
-                    foreach (var item in addRoleResult.Errors)
-                    {
-                        ModelState.AddModelError("", item.Description);
-                    }
+                    HataEkle(addRoleResult.Errors);
                 }
-                foreach (var item in result.Errors)
-                {
-                    ModelState.AddModelError("", item.Description);
-                }
+                HataEkle(result.Errors);
             }
             return View(model);
         }
+        #endregion
 
+        #region Çıkış Yap
         public async Task<IActionResult> CikisYap()
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index");
-        }
+        } 
+        #endregion
     }
 }
