@@ -2,6 +2,7 @@
 using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.AciliyetDTOs;
 using IsTakip.Entities.Concrete;
+using IsTakip.Web.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,8 +12,8 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "Admin")]
-    [Area("Admin")]
+    [Authorize(Roles = RoleInfo.Admin)]
+    [Area(AreaInfo.Admin)]
     public class AciliyetController : Controller
     {
         #region CTOR - DEPENDENCY INJECTION

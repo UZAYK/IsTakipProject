@@ -1,12 +1,13 @@
 ﻿using IsTakip.Business.Interfaces;
+using IsTakip.Web.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = RoleInfo.Admin)]
+    [Area(AreaInfo.Admin)]
     public class GrafikController : Controller
     {
         private readonly IAppUserService _appUserService;

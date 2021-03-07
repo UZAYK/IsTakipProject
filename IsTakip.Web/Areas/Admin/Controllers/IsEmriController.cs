@@ -4,6 +4,7 @@ using IsTakip.DTO.DTOs.AppUserDtos;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.BaseControllers;
+using IsTakip.Web.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,8 +14,8 @@ using System.Linq;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = RoleInfo.Admin)]
+    [Area(AreaInfo.Admin)]
     public class IsEmriController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION

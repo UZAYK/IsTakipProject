@@ -2,6 +2,7 @@
 using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.Entities.Concrete;
+using IsTakip.Web.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "Admin")]
-    [Area("Admin")]
+    [Authorize(Roles = RoleInfo.Admin)]
+    [Area(AreaInfo.Admin)]
     public class GorevController : Controller
     {
         #region CTOR - DEPENDENCY INJECTION

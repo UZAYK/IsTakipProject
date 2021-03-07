@@ -1,6 +1,7 @@
 ﻿using IsTakip.Business.Interfaces;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.BaseControllers;
+using IsTakip.Web.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,8 +12,8 @@ using System.Threading.Tasks;
 
 namespace IsTakip.Web.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = RoleInfo.Admin)]
+    [Area(AreaInfo.Admin)]
     public class HomeController : BaseIdentityController
     {
         #region CTOR - DEPENDENCY INJECTION
