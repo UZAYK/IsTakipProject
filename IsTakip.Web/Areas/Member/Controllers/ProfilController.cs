@@ -64,10 +64,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
                     return RedirectToAction("Index");
                 }
 
-                foreach (var item in result.Errors)
-                {
-                    ModelState.AddModelError("", item.Description);
-                }
+                HataEkle(result.Errors);
             }
             return View(model);
         } 
