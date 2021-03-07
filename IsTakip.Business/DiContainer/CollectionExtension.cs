@@ -1,4 +1,5 @@
 ﻿using IsTakip.Business.Concrete;
+using IsTakip.Business.CustomLogger;
 using IsTakip.Business.Interfaces;
 using IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories;
 using IsTakip.DataAccess.Interfaces;
@@ -22,6 +23,9 @@ namespace IsTakip.Business.DiContainer
             services.AddScoped<IAciliyetDal, EfAciliyetRepository>();
             services.AddScoped<IAppUserDal, EfAppUserRepository>();
             services.AddScoped<IBildirimDal, EfBildirimRepository>();
+
+
+            services.AddTransient<ICustomLogger, NLogLogger>();
         }
     }
 }

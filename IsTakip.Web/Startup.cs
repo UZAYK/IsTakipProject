@@ -32,13 +32,14 @@ namespace IsTakip.Web
 
             services.AddIdentityConfigure();
 
-            services.AddAutoMapper(typeof(Startup));
+            services.AddValidator();
 
-           
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddControllersWithViews().AddFluentValidation()
                   .AddRazorRuntimeCompilation();
         }
+
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
             UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
@@ -47,6 +48,12 @@ namespace IsTakip.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+
+            app.UseStatusCodePagesWithReExecute("/Home/StatusCode", "?code={0}");
 
             app.UseRouting();
             app.UseAuthentication();
@@ -67,5 +74,6 @@ namespace IsTakip.Web
                     );
             });
         }
+
     }
 }

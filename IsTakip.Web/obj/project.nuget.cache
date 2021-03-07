@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c5oAv0ik/aiPCXzSwOU0+E4KeEsMg09sXDh1ZucCq6n1DVihBkG520s1VV1ykpSDGS6s4m+xsNcVyQNhL4imRw==",
+  "dgSpecHash": "KITP/d0J5CHF93TbdtkJ3jmy6ySXBdmAPs73qdwHlgWDr4xcK/MgtHa4ow2IKog2qAI1hxN5iLKoRGenYdDJ/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Web\\IsTakip.Web.csproj",
   "expectedPackageFiles": [
@@ -96,6 +96,9 @@
     "C:\\Users\\uzayk\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\nlog\\4.7.8\\nlog.4.7.8.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\nlog.config\\4.7.8\\nlog.config.4.7.8.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\nlog.schema\\4.7.8\\nlog.schema.4.7.8.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

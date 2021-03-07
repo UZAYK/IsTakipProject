@@ -20,11 +20,9 @@ namespace IsTakip.Web.Areas.Admin.Controllers
     {
         #region CTOR - DEPENDENCY INJECTION
 
-        private readonly UserManager<AppUser> _userManager;
         private readonly IMapper _mapper;
         public ProfilController(UserManager<AppUser> userManager, IMapper mapper) :base(userManager)
         {
-            _userManager = userManager;
             _mapper = mapper;
         }
         #endregion

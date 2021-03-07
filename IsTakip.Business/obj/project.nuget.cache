@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FYQGkjJ4UhQyV5pl2rAVbHdY6qBA/JgHoViLoplAg4qr/FmWIXmkAHO1cX+xcvh2XsUoe54eOMEsLgJ/Xm9Sfg==",
+  "dgSpecHash": "gIHGzwXq04oTZMnyF3zCp9yAb6gjhjBAVKX11Jx0VYtzz22Mo3uORF1rBJNOmUx2z7VfqQY50KCLFYN88i6Mbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Business\\IsTakip.Business.csproj",
   "expectedPackageFiles": [
@@ -70,6 +70,9 @@
     "C:\\Users\\uzayk\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\nlog\\4.7.8\\nlog.4.7.8.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\nlog.config\\4.7.8\\nlog.config.4.7.8.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\nlog.schema\\4.7.8\\nlog.schema.4.7.8.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

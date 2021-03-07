@@ -63,6 +63,14 @@
               "target": "Package",
               "version": "[9.5.1, )"
             },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.8, )"
+            },
+            "NLog.Config": {
+              "target": "Package",
+              "version": "[4.7.8, )"
+            },
             "iTextSharp.LGPLv2.Core": {
               "target": "Package",
               "version": "[1.7.1, )"
