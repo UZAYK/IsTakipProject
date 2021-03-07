@@ -1,4 +1,4 @@
-﻿@model RaporAddViewModel
+﻿@model RaporAddDto
 @{
     ViewData["Title"] = "EkleRapor";
     Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
@@ -29,7 +29,7 @@
 
         <input type="hidden" asp-for="@Model.GorevId" />
 
-        <label asp-for="Tanim"></label>
+        <label asp-for="Tanim">Tanım :</label>
         <span asp-validation-for="Tanim" class="text-danger"></span>
         <input asp-for="Tanim" type="text" class="form-control" />
     </div>

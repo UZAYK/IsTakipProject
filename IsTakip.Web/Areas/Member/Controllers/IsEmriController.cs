@@ -1,4 +1,7 @@
-﻿using IsTakip.Business.Interfaces;
+﻿using AutoMapper;
+using IsTakip.Business.Interfaces;
+using IsTakip.DTO.DTOs.GorevDtos;
+using IsTakip.DTO.DTOs.RaporDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -15,19 +18,21 @@ namespace IsTakip.Web.Areas.Member.Controllers
     {
         #region CTOR - DEPENDENCY INJECTION
         private readonly IGorevService _gorevService;
-        private readonly UserManager<AppUser> _userManager;
         private readonly IRaporService _raporService;
         private readonly IBildirimService _bildirimService;
+        private readonly IMapper _mapper;
+        private readonly UserManager<AppUser> _userManager;
 
         public object RaporUpdateViewModel { get; private set; }
 
         public IsEmriController(IGorevService gorevService, UserManager<AppUser> userManager,
-                                IRaporService raporService, IBildirimService bildirimService)
+                                IRaporService raporService, IBildirimService bildirimService, IMapper mapper)
         {
             _gorevService = gorevService;
             _raporService = raporService;
-            _userManager = userManager;
             _bildirimService = bildirimService;
+            _mapper = mapper;
+            _userManager = userManager;
         }
         #endregion
 
@@ -36,22 +41,8 @@ namespace IsTakip.Web.Areas.Member.Controllers
         {
             TempData["Active"] = "isemri";
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            var gorevler = _gorevService.GetirTumTablolarla(I => I.AppUserId == user.Id && !I.Durum);
-
-            List<GorevListAllViewModel> models = new List<GorevListAllViewModel>();
-            foreach (var item in gorevler)
-            {
-                GorevListAllViewModel model = new GorevListAllViewModel();
-                model.Id = item.Id;
-                model.Aciklama = item.Aciklama;
-                model.Aciliyet = item.Aciliyet;
-                model.Ad = item.Ad;
-                model.AppUser = item.AppUser;
-                model.Raporlar = item.Raporlar;
-                model.OlusturulmaTarihi = item.OlusturulmaTarihi;
-                models.Add(model);
-            }
-            return View(models);
+            
+            return View(_mapper.Map<List<GorevListAllDto>>(_gorevService.GetirTumTablolarla(I => I.AppUserId == user.Id && !I.Durum)));
         }
 
         #endregion
@@ -60,14 +51,14 @@ namespace IsTakip.Web.Areas.Member.Controllers
         public IActionResult EkleRapor(int id)
         {
             var gorev = _gorevService.GetirAciliyetileId(id);
-            RaporAddViewModel model = new RaporAddViewModel();
+            RaporAddDto model = new RaporAddDto();
             model.GorevId = id;
             model.Gorev = gorev;
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> EkleRaporAsync(RaporAddViewModel model)
+        public async Task<IActionResult> EkleRapor(RaporAddDto model)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +93,7 @@ namespace IsTakip.Web.Areas.Member.Controllers
             TempData["Active"] = "isemri";
 
             var rapor = _raporService.GetirGorevileId(id);
-            RaporUpdateViewModel model = new RaporUpdateViewModel();
+            RaporUpdateDto model = new RaporUpdateDto();
             model.Id = rapor.Id;
             model.Tanim = rapor.Tanim;
             model.Detay = rapor.Detay;

@@ -1,4 +1,4 @@
-﻿@model List<GorevListAllViewModel>
+﻿@model List<GorevListAllDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
@@ -105,7 +105,9 @@
 </div>
 
 @section JavaScript{
+
     <script type="text/javascript">
+import { success } from "toastr";
 
         $(document).ready(function () {
             $("#exampleModal").on("show.bs.modal", function (event) {
@@ -114,22 +116,49 @@
                 $("#btnKaydet").click(function () {
                     $.ajax({
                         type: "GET",
-                        contentType: "application/json; charset = utf-8",
+                        contentType: "application/json; charset=utf-8",
                         url: "./IsEmri/TamamlaGorev",
                         data: { gorevId: data },
                         success: function () {
-                            toastr.error("İşlem başarıyla gerçekleşti.", "BAŞARILI");
+                            window.location.reload();
+                            //toastr.error("İşlem başarıyla gerçekleşti.", "BAŞARILI");
                         },
                         error: function (error) {
-                            toastr.error("HATA", "İşlem Başarısız");
+                            alert(error.responseText);
+                            //toastr.error("HATA", "İşlem Başarısız");
                         }
                     })
                 })
-
             });
         });
-
     </script>
+
+
+    @*<script type="text/javascript">
+
+            $(document).ready(function () {
+                $("#exampleModal").on("show.bs.modal", function (event) {
+                    let tetikleyenElement = $(event.relatedTarget);
+                    let data = tetikleyenElement.data("id");
+                    $("#btnKaydet").click(function () {
+                        $.ajax({
+                            type: "GET",
+                            contentType: "application/json; charset = utf-8",
+                            url: "./IsEmri/TamamlaGorev",
+                            data: { gorevId: data },
+                            success: function () {
+                                toastr.error("İşlem başarıyla gerçekleşti.", "BAŞARILI");
+                            },
+                            error: function (error) {
+                                toastr.error("HATA", "İşlem Başarısız");
+                            }
+                        })
+                    })
+
+                });
+            });
+
+        </script>*@
 }
 
 

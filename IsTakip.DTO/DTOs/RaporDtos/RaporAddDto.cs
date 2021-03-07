@@ -1,4 +1,6 @@
-﻿namespace IsTakip.DTO.DTOs.RaporDtos
+﻿using IsTakip.Entities.Concrete;
+
+namespace IsTakip.DTO.DTOs.RaporDtos
 {
     public class RaporAddDto
     {
@@ -8,6 +10,6 @@
 
         public string Detay { get; set; }
 
-        //public Gorev Gorev { get; set; }
+        public Gorev Gorev { get; set; }
     }
 }
