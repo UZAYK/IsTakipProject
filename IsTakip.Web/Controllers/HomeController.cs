@@ -32,6 +32,11 @@ namespace IsTakip.Web.Controllers
         }
         #endregion
 
+        public IActionResult Giris()
+        {
+            return View();
+        }
+
         #region Giriş Yap
         [HttpPost]
         public async Task<IActionResult> GirisYap(AppUserSignInDto model)

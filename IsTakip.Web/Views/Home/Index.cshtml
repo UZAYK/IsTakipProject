@@ -1,35 +1,189 @@
-﻿@model AppUserSignInDto
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>İş Takip Projesi</title>
+    <link rel="icon" type="image/x-icon" href="/Template/FirstPageTheme/assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/Template/FirstPageTheme/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Uzay KAHRAMAN</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">HAKKIMIZDA</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">DEMO BİLGİ</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">İLETİŞİM</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" asp-action="Giris" asp-controller="Home">GİRİŞ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+                <h1 class="mx-auto my-0 text-uppercase">İş Takİp Programı</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">
+                    UK-İŞP görev yönetimi, proje planlama, takım işbirliği ve müşterilerinizi tek bir platformda birleştirir.
+                </h2>
+                <a class="btn btn-primary js-scroll-trigger" href="#about">Detaylı bilgi almak ister misiniz?</a>
+            </div>
+        </div>
+    </header>
+    <!-- About-->
+    <section class="about-section text-center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">İşinizi yönetin, uygulamaları değil!</h2>
+                    <p class="text-white-50">
+                        <a href="#information">UK-İŞP</a> ekibinizin görevleri, projeleri birlikte yönetmesinizi sağlar. Rapor yazabilir, raporları indirebilir, ekibinizle anlık yazışabilir ve daha birçok şey yapabilirsiniz.
+                        Tüm özellikleri bir arada kullanabilir veya yalnızca ihtiyacınız olanları seçebilirsiniz. Tüm özellikleri tek bir uygulamaya entegre ederek verimliliğinizi artırın.
+                        UK-İŞP ile zamanınızı farklı uygulamaları yönetmek yerine işinizi yönetmek için kullanırsınız.
+                    </p>
+                </div>
+            </div>
+            <img class="img-fluid" src="/Template/FirstPageTheme/assets/img/ipad.png" alt="" />
+        </div>
+    </section>
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container">
+            <!-- Featured Project Row-->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="/Template/FirstPageTheme/assets/img/istakip.jpg" alt="" /></div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>İş Takibi</h4>
+                        <p class="text-black-50 mb-0">
+                            Ekip üyelerinize görev atayabilirsiniz. Görev atamaları, yazılan raporlar, gecikmiş görevler ve
+                            görevlerle ilgili durumlar hakkında bildirimler alırsınız.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project One Row-->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6"><img class="img-fluid" src="/Template/FirstPageTheme/assets/img/projetakip.jpg" alt="" /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">Proje Takibi</h4>
+                                <p class="mb-0 text-white-50">
+                                    Projelerinizi planlayabilir ve tamamlanan işler, görevlere harcanan zaman ve ekip üyesi performansları
+                                    hakkında raporlar ve istatistikler alabilirsiniz.
+                                </p>
+                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Two Row-->
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6"><img class="img-fluid" src="/Template/FirstPageTheme/assets/img/takim.jpg" alt="" /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">Takım İşbirliği</h4>
+                                <p class="mb-0 text-white-50">
+                                    Ekibiniz rapor yazarak, kişisel ya da grup sohbetine mesaj göndererek, görevler hakkında yorum yazarak işbirliği yapabilir. 
+                                    Bilgi kolayca paylaşılır ve daha sonra ulaşılabilir.
+                                </p>
+                                <hr class="d-none d-lg-block mb-0 mr-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Information-->
+    <section class="signup-section" id="information">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h2 class="text-white mb-5">Demo edinmek için abone olun!</h2>
+                    <form class="form-inline d-flex">
+                        <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email"
+                               placeholder="Lütfen mail adresinizi giriniz..." />
+                        <button class="btn btn-primary mx-auto" type="submit">Abone OL!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<form asp-action="GirisYap" method="post" class="mt-5 w-50 mx-auto p-4 shadow">
-
-    <h4 class="text-center">GİRİŞ YAP</h4>
-
-    <div class="form-group ">
-        <label asp-for="UserName">Kullanıcı Adı :</label>
-        <span asp-validation-for="UserName" class="text-danger"></span>
-        <input asp-for="UserName" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Password">Şifre :</label>
-        <span asp-validation-for="Password" class="text-danger"></span>
-        <input asp-for="Password" type="password" class="form-control" />
-
-    </div> 
-    <div class="form-check">
-        <input type="checkbox" asp-for="RememberMe" class="form-check-input" />
-        <label asp-for="RememberMe" class="form-check-label">Beni Hatırla</label>
-        <span asp-validation-for="RememberMe" class="text-danger"></span>
-
-    </div>
-
-    <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
-
-    <a asp-action="KayitOl" class="btn btn-outline-primary btn-sm my-3 mr-2">Kayıt Ol</a>
-    <input type="submit" class="btn btn-primary btn-sm" value="Giriş Yap" />
-
-</form>
+    <!-- Contact-->
+    <section class="contact-section bg-black" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Adres</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">- Türkiye -</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">E-mail</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50"><a href="#!">kahramanuzay@gmail.com</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Telefon</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">+1 (555) 902-8832</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2" href="https://www.linkedin.com/in/uzay-kahraman-834019198/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="mx-2" href="https://www.facebook.com/uzay.kahramann/"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-2" href="https://github.com/UZAYK"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container">Copyright 2021 © Tüm Hakları Uzay KAHRAMAN tarafından saklıdır.</div></footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/Template/FirstPageTheme/js/scripts.js"></script>
+</body>
+</html>
