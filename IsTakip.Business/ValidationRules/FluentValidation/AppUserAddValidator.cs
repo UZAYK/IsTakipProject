@@ -9,7 +9,7 @@ namespace IsTakip.Business.ValidationRules.FluentValidation
         {
             RuleFor(I => I.UserName).NotNull().WithMessage("Kullanıcı Adı boş geçilemez");
 
-            RuleFor(I => I.Password).NotNull().WithMessage("Parole alanı boş geçilemez");
+            RuleFor(I => I.Password).NotNull().WithMessage("Parola alanı boş geçilemez");
 
             RuleFor(I => I.ConfirmPassword).NotNull().WithMessage("Parola onay alanı boş geçilemez");
 

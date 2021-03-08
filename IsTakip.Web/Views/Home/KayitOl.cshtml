@@ -4,52 +4,90 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<form asp-action="KayitOl" asp-controller="Home" method="post" class="mt-5 w-75 mx-auto p-3 shadow">
-    <h4 class="text-center">KAYIT OL</h4>
+<link href="~/css/SignInCss.css" rel="stylesheet" />
 
-    <div class="form-group">
-        <label asp-for="Name">Adınız :</label>
-        <span asp-validation-for="Name" class="text-danger"></span>
-        <input asp-for="Name" type="text" class="form-control" />
+<div class="container-fluid">
+
+    <div class="row no-gutter">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+
+        <div class="col-md-8 col-lg-6">
+
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-8 mx-auto">
+                            <h3 class="login-heading mb-4 text-center font-weight-bold">KAYIT OL</h3>
+
+                            <form asp-action="KayitOl" asp-controller="Home" method="post">
+
+                                <div class="form-label-group">
+                                    <input asp-for="Name" class="form-control input-color" placeholder="İsim" required autofocus />
+                                    <label asp-for="Name"></label>
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input asp-for="UserName" class="form-control input-color" placeholder="Kullanıcı Adı" required autofocus />
+                                    <label asp-for="UserName">Kullancı Adınız</label>
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input asp-for="SurName" class="form-control input-color" placeholder="Soyadınız" required autofocus />
+                                    <label asp-for="SurName">Soyadınız</label>
+                                    <span asp-validation-for="SurName" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input asp-for="Email" class="form-control input-color" placeholder="E-Mail" required autofocus />
+                                    <label asp-for="Email">E-mail</label>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input asp-for="Password" type="password" class="form-control input-color" placeholder="Şifre" required />
+                                    <label asp-for="Password">Şifre</label>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input asp-for="ConfirmPassword" class="form-control input-color" placeholder="Şifre Tekrar" required autofocus />
+                                    <label asp-for="ConfirmPassword">Şifre Tekrar</label>
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                </div>
+
+                                <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+
+                                <button type="submit" class="btn btn-lg btn-danger btn-block btn-login text-uppercase font-weight-bold mb-2">
+                                    <i class="fas fa-thumbs-up mr-2"></i> TAMAM
+                                </button>
+
+                                <a asp-action="Index" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">
+                                    <i class="fas fa-hand-point-left mr-2"></i> VAZGEÇ
+                                </a>
+
+                                <a asp-action="Index" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-hand-point-left mr-2"></i> Vazgeç
+                                </a>
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-thumbs-up mr-2"></i> Kaydet
+                                </button>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </div>
+</div>
 
-    <div class="form-group">
-        <label asp-for="SurName">Soyadınız :</label>
-        <span asp-validation-for="SurName" class="text-danger"></span>
-        <input asp-for="SurName" type="text" class="form-control" />
-    </div>
+<script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Template/startbootstrap-simple-sidebar-gh-pages (1)/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <div class="form-group ">
-        <label asp-for="Email"></label>
-        <span asp-validation-for="Email" class="text-danger"></span>
-        <input asp-for="Email" class="form-control" />
-    </div>
-    <div class="form-group ">
-        <label asp-for="UserName">Kullanıcı Adınız :</label>
-        <span asp-validation-for="UserName" class="text-danger"></span>
-        <input asp-for="UserName" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Password">Şifreniz :</label>
-        <span asp-validation-for="Password" class="text-danger"></span>
-        <input type="password" asp-for="Password" class="form-control" />
-
-    </div>
-    <div class="form-group">
-        <label asp-for="ConfirmPassword">Parola Tekrar :</label>
-        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-        <input type="password" asp-for="ConfirmPassword" class="form-control" />
-
-    </div>
-  
-    <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
-
-    <a asp-action="Index" class="btn btn-outline-primary btn-sm">
-        <i class="fas fa-hand-point-left mr-2"></i> Vazgeç</a>
-    <button type="submit" class="btn btn-primary btn-sm">
-        <i class="fas fa-thumbs-up mr-2"></i> Kaydet
-    </button>
-
-</form>
 

@@ -3,10 +3,65 @@
     ViewData["Title"] = "Giris";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link href="~/css/SignInCss.css" rel="stylesheet" />
 
-<form asp-action="GirisYap" method="post" class="mt-5 w-50 mx-auto p-4 shadow">
+<div class="container-fluid">
 
-    <h4 class="text-center">GİRİŞ YAP</h4>
+    <div class="row no-gutter">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+
+        <div class="col-md-8 col-lg-6">
+
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-8 mx-auto">
+                            <h3 class="login-heading mb-4 text-center font-weight-bold">GİRİŞ YAP</h3>
+
+                            <form asp-action="GirisYap" method="post">
+
+                                <div class="form-label-group">
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+                                    <input asp-for="UserName" class="form-control input-color" placeholder="Kullanıcı Adı" required autofocus />
+                                    <label for="inputPassword">Kulanıcı Adı</label>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                    <input asp-for="Password" type="password" class="form-control input-color" placeholder="Password" required />
+                                    <label for="inputPassword">Şifre</label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <span asp-validation-for="RememberMe" class="text-danger"></span>
+                                    <input type="checkbox" asp-for="RememberMe" class="form-check-input input-color" id="customCheck1" />
+                                    <label asp-for="RememberMe" class="form-check-label" for="customCheck1">Beni Hatırla</label>
+                                </div>
+
+                                <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+                                <input type="submit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" value="Giriş" />
+                                <a asp-action="KayitOl" class="btn btn-lg btn-danger btn-block btn-login text-uppercase font-weight-bold mb-2">Kayıt Ol</a>
+                                <div class="text-center">
+                                    <a class="small" href="#">Şifreni mi unuttun?</a>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Template/startbootstrap-simple-sidebar-gh-pages (1)/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+@*<h4 class="text-center">GİRİŞ YAP</h4>
 
     <div class="form-group ">
         <label asp-for="UserName">Kullanıcı Adı :</label>
@@ -30,6 +85,8 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
 
     <a asp-action="KayitOl" class="btn btn-outline-primary btn-sm my-3 mr-2">Kayıt Ol</a>
-    <input type="submit" class="btn btn-primary btn-sm" value="Giriş Yap" />
+    <input type="submit" class="btn btn-primary btn-sm" value="Giriş Yap" />*@
 
-</form>
+@*</form>*@
+
+
