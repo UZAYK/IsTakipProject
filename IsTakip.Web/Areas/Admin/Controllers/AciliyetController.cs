@@ -2,7 +2,7 @@
 using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.AciliyetDTOs;
 using IsTakip.Entities.Concrete;
-using IsTakip.Web.StringInfo;
+using IsTakip.Core.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;

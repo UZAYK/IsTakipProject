@@ -3,7 +3,7 @@ using IsTakip.Business.Interfaces;
 using IsTakip.DTO.DTOs.GorevDtos;
 using IsTakip.Entities.Concrete;
 using IsTakip.Web.BaseControllers;
-using IsTakip.Web.StringInfo;
+using IsTakip.Core.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

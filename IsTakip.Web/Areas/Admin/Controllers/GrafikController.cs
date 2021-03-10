@@ -1,5 +1,5 @@
 ﻿using IsTakip.Business.Interfaces;
-using IsTakip.Web.StringInfo;
+using IsTakip.Core.StringInfo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;

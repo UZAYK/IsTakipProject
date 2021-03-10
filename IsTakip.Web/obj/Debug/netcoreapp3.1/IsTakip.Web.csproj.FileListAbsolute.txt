@@ -475,3 +475,7 @@ C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\R
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\bin\Debug\netcoreapp3.1\NLog.config
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\bin\Debug\netcoreapp3.1\NLog.dll
 C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Giris.cshtml.g.cs
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\bin\Debug\netcoreapp3.1\IsTakip.Core.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\bin\Debug\netcoreapp3.1\IsTakip.Core.pdb
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\uzayk\source\repos\IsTakipProjesi\IsTakip.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
