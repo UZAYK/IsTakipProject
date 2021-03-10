@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IsTakip.Business\IsTakip.Business.csproj" />
+    <ProjectReference Include="..\IsTakip.DataAccess\IsTakip.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

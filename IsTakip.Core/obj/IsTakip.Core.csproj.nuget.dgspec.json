@@ -128,6 +128,9 @@
             "projectReferences": {
               "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Business\\IsTakip.Business.csproj": {
                 "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Business\\IsTakip.Business.csproj"
+              },
+              "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj"
               }
             }
           }

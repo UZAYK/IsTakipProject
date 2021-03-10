@@ -2976,6 +2976,7 @@
       "IsTakip.Core/1.0.0": {
         "dependencies": {
           "IsTakip.Business": "1.0.0",
+          "IsTakip.DataAccess": "1.0.0",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0"
         },
         "runtime": {

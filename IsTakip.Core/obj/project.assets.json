@@ -9664,6 +9664,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "IsTakip.Business >= 1.0.0",
+      "IsTakip.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.ViewFeatures >= 2.2.0"
     ]
   },
@@ -9701,6 +9702,9 @@
           "projectReferences": {
             "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Business\\IsTakip.Business.csproj": {
               "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Business\\IsTakip.Business.csproj"
+            },
+            "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.DataAccess\\IsTakip.DataAccess.csproj"
             }
           }
         }

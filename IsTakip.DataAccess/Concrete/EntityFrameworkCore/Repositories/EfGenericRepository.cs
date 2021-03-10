@@ -9,7 +9,7 @@ using System.Text;
 namespace IsTakip.DataAccess.Concrete.EntityFrameworkCore.Repositories
 {
     public class EfGenericRepository<Tablo> : IGenericDal<Tablo>
-        where Tablo : class, ITablo, new()
+         where Tablo : class, ITablo, new()
     {
         public List<Tablo> GetirHepsi()
         {
