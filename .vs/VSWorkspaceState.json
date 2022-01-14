@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\IsTakip.Business",
+    "\\IsTakip.Business\\Interfaces",
+    "\\IsTakip.DataAccess",
+    "\\IsTakip.DataAccess\\Concrete",
+    "\\IsTakip.DataAccess\\Concrete\\EntityFrameworkCore",
+    "\\IsTakip.DataAccess\\Concrete\\EntityFrameworkCore\\Repositories",
+    "\\IsTakip.DataAccess\\Interfaces",
+    "\\IsTakip.Entities",
+    "\\IsTakip.Entities\\Interfaces"
   ],
-  "SelectedNode": "\\IsTakipProjesi.sln",
+  "SelectedNode": "\\IsTakip.DataAccess\\Concrete\\EntityFrameworkCore\\Repositories\\EfGenericRepository.cs",
   "PreviewInSolutionExplorer": false
 }

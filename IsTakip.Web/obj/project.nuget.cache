@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IUgOJdU3fAhpuLiSwdfA6SaFr3iMYOydBK4dzXrMESxRpEEzjc6tqa7G5JmypkXw2cjtlRAGOmFNXe+Y10CRUQ==",
+  "dgSpecHash": "0CdSDNHxZ3pk9cnowUYYzhz0i+SQHyUB2jiDPjp2gqLKQxVOOGjWCSt9BXhDN6gIsUurNwOSYOfPALBfu99NiA==",
   "success": true,
   "projectFilePath": "C:\\Users\\uzayk\\source\\repos\\IsTakipProjesi\\IsTakip.Web\\IsTakip.Web.csproj",
   "expectedPackageFiles": [
@@ -233,7 +233,8 @@
     "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\uzayk\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\uzayk\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "64a4f08e-ddc2-4cfa-a381-0ea3b20212a9": {
+      "ProjectGuid": "64a4f08e-ddc2-4cfa-a381-0ea3b20212a9",
+      "DisplayName": "IsTakip.Entities",
+      "ColorIndex": 0
+    },
+    "142a77f6-a180-4e5c-91fc-f71461e5755f": {
+      "ProjectGuid": "142a77f6-a180-4e5c-91fc-f71461e5755f",
+      "DisplayName": "IsTakip.DataAccess",
+      "ColorIndex": 1
+    },
+    "35bbca5c-6175-4223-8473-813344d524bd": {
+      "ProjectGuid": "35bbca5c-6175-4223-8473-813344d524bd",
+      "DisplayName": "IsTakip.Business",
+      "ColorIndex": 2
+    },
+    "514ca03a-25fa-471a-b33d-fb0aac2df863": {
+      "ProjectGuid": "514ca03a-25fa-471a-b33d-fb0aac2df863",
+      "DisplayName": "IsTakip.Web",
+      "ColorIndex": 3
+    },
+    "9135be00-da9d-49e1-b0f0-077c8165bfd3": {
+      "ProjectGuid": "9135be00-da9d-49e1-b0f0-077c8165bfd3",
+      "DisplayName": "IsTakip.DTO",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
